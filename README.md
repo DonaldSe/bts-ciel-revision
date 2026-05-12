@@ -1,87 +1,74 @@
-# 📘 BTS CIEL — Fiche de Révision Physique
+# 📘 BTS CIEL — Fiches de Révision Physique
 
-Fiche de révision complète et interactive pour la **partie physique** du BTS CIEL (Cybersécurité, Informatique et réseaux, Électronique). Couvre **les deux options** : A (Informatique & Réseaux) et B (Électronique & Réseaux).
+Site de révision complet pour la **partie physique** du BTS CIEL (Cybersécurité, Informatique et réseaux, Électronique). Couvre **les deux options** : A (Informatique & Réseaux) et B (Électronique & Réseaux).
 
-> Document HTML autonome — aucun build, aucune dépendance locale. Ouvre `index.html` dans un navigateur, c'est tout.
+> 🌐 **En ligne** : [donaldse.github.io/bts-ciel-revision](https://donaldse.github.io/bts-ciel-revision/)
 
-## 🎯 Contenu
+## ✨ Ce que contient le site
 
-La fiche couvre l'intégralité du référentiel officiel (Repère pour la formation V2), organisée en 9 sections :
+| Page | Description |
+|---|---|
+| **`index.html`** | 🏠 Page d'accueil avec sommaire et liens vers toutes les ressources |
+| **`fiche-complete.html`** | 📖 Fiche complète détaillée (9 sections, ~70 formules, ~30 min de lecture) |
+| **`fiche-2pages.html`** | 📄 Résumé express imprimable sur 2 pages |
+| **`quiz.html`** | 🎯 Quiz interactif de 30 questions avec correction et explications |
 
-| Section | Thème | Compétences |
-|---|---|---|
-| 00 | Repères, cadre du programme, niveaux taxonomiques | — |
-| 01 | **Acquérir l'information** — capteurs, sensibilité, plage de mesure | C4, C6, C9, C10/C11 |
-| 02 | **Traiter l'information** — chaîne de mesure, amplification, CAN, Shannon | C4, C5 |
-| 03 | **Transporter l'information** — ondes, lignes, fibre, antennes, modulations (ASK, PSK, QAM, FSK, GMSK) | C4, C5, C6, C9, C10/C11 |
-| 04 | **Utiliser l'information** — chaîne d'action, PWM, asservissement, PID | C4, C5 |
-| 05 | Lois générales de l'électricité (continu + sinusoïdal) | Transversal |
-| 06 | Caractérisation des signaux (temporelle, fréquentielle, bruit) | Transversal |
-| 07 | Fonction filtrage (analogique + numérique, RIF/RII) | Transversal |
-| 08 | Mesures et incertitudes (types A et B) | Transversal |
-| 09 | **Formulaire express** — toutes les formules par cœur | — |
+## 🎯 Méthode de révision recommandée
 
-## ✨ Caractéristiques
+1. **Apprendre** → Lire la fiche complète, comprendre chaque formule
+2. **Mémoriser** → Imprimer la fiche 2 pages, la garder sous la main
+3. **Tester** → Faire le quiz, viser 25/30 minimum
 
-- 📐 **Formules mathématiques rendues avec KaTeX** (chargement depuis CDN)
-- 🎨 **Design éditorial original** — typographie Fraunces + Inter Tight + JetBrains Mono
-- 📱 **Responsive** — fonctionne sur mobile, tablette, desktop
-- 🖨️ **Imprimable** — styles d'impression intégrés (CSS `@media print`)
-- 🧭 **Navigation collante** — sommaire toujours accessible en haut
-- 🔍 **Tableaux et schémas** pour chaînes de mesure, chaînes d'action, asservissement
-- 📊 **Tous les standards** : RS-232, RS-485, I²C, SPI, UART, CAN, Ethernet, Wi-Fi, Bluetooth, LoRa…
+## 📚 Contenu du programme
 
-## 🚀 Utilisation
+### Thèmes principaux
+1. **Acquérir l'information** — capteurs, sensibilité, datasheet, capteurs intelligents
+2. **Traiter l'information** — chaîne de mesure, amplification, CAN, condition de Shannon
+3. **Transporter l'information** — ondes, lignes, fibre optique, antennes, modulations (ASK, PSK, QAM, FSK, GMSK)
+4. **Utiliser l'information** — chaîne d'action, PWM, asservissement, PID
 
-### Localement
+### Connaissances transversales
+- Lois générales de l'électricité (continu + sinusoïdal)
+- Caractérisation des signaux (temporel, fréquentiel, bruit, Fourier)
+- Fonction filtrage (analogique + numérique RIF/RII, Bode)
+- Mesures et incertitudes (types A et B)
 
-```bash
-git clone https://github.com/<ton-pseudo>/bts-ciel-revision.git
-cd bts-ciel-revision
-# ouvre index.html dans ton navigateur
-```
-
-Ou simplement double-clique sur `index.html`.
-
-### En ligne (GitHub Pages)
-
-1. Fork ou clone ce dépôt
-2. Settings → Pages → Source : `Deploy from a branch` → `main` → `/ (root)`
-3. La fiche sera publiée à `https://<ton-pseudo>.github.io/bts-ciel-revision/`
-
-## 📝 Comment publier ce dépôt sur GitHub
+## 🚀 Déploiement avec GitHub CLI
 
 ```bash
+# 1. Clone le repo localement
+gh repo clone DonaldSe/bts-ciel-revision
 cd bts-ciel-revision
-git init
+
+# 2. Copie tous les nouveaux fichiers dans le dossier
+#    (index.html, fiche-complete.html, fiche-2pages.html, quiz.html, README.md)
+
+# 3. Commit et push
 git add .
-git commit -m "Initial commit: fiche révision BTS CIEL physique"
-git branch -M main
+git commit -m "Add sommaire, fiche 2 pages and interactive quiz"
+git push origin main
 
-# Crée un dépôt public sur github.com (sans README, sans .gitignore, sans license — déjà inclus)
-# Récupère son URL, puis :
-
-git remote add origin https://github.com/<ton-pseudo>/bts-ciel-revision.git
-git push -u origin main
+# 4. Active GitHub Pages (une seule fois)
+gh repo edit --enable-pages
+# Ou via le web : Settings → Pages → Source: main / root → Save
 ```
-
-Puis active **GitHub Pages** dans les Settings du dépôt pour le rendre accessible en ligne.
 
 ## 🛠️ Personnalisation
 
-Tout est dans un seul fichier `index.html` :
+Tout est dans des fichiers HTML autonomes (pas de build, pas de framework). Pour modifier :
 
-- **Couleurs** : variables CSS au début (`:root { --accent: #c2410c ... }`)
-- **Police** : chargée depuis Google Fonts
-- **Sections** : balises `<section id="...">` repérables dans la nav
-
-## 📚 Source du référentiel
-
-Le contenu est issu du document officiel **« Repère pour la formation — partie physique »** (RPF BTS CIEL V2), publié par le Ministère de l'Éducation Nationale pour le BTS CIEL.
+- **Couleurs** : variables CSS au début de chaque fichier (`:root { --accent: ... }`)
+- **Polices** : Google Fonts (Fraunces, Inter Tight, JetBrains Mono)
+- **Formules** : KaTeX (LaTeX rendu côté client)
+- **Quiz** : ajouter des questions dans le tableau `questions` de `quiz.html`
 
 ## 📄 Licence
 
-MIT — fais-en ce que tu veux. Si tu trouves ça utile, une étoile ⭐ sur le dépôt fait toujours plaisir.
+MIT — fais-en ce que tu veux. ⭐ une étoile sur le repo fait toujours plaisir.
+
+## 📚 Source du référentiel
+
+Contenu basé sur le document officiel **« Repère pour la formation — partie physique »** (RPF BTS CIEL V2), publié par le Ministère de l'Éducation Nationale.
 
 ---
 

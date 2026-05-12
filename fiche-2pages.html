@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BTS CIEL · Fiche 2 pages</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter+Tight:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});"></script>
+<style>
+:root{
+  --ink:#1a1614;
+  --paper:#fbf9f3;
+  --accent:#c2410c;
+  --accent-2:#0f5e3f;
+  --accent-3:#1e3a8a;
+  --muted:#6b6258;
+  --bg-page:#e8e5dc;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Inter Tight',system-ui,sans-serif;
+  background:var(--bg-page);
+  color:var(--ink);
+  line-height:1.35;
+  padding:24px 12px;
+}
+
+/* TOOLBAR */
+.toolbar{
+  max-width:210mm;margin:0 auto 20px;
+  display:flex;justify-content:space-between;align-items:center;
+  font-family:'JetBrains Mono',monospace;font-size:12px;
+}
+.toolbar a{
+  color:var(--ink);text-decoration:none;
+  padding:8px 16px;border:1px solid var(--ink);
+  background:var(--paper);font-weight:600;
+  text-transform:uppercase;letter-spacing:0.05em;font-size:11px;
+}
+.toolbar a:hover{background:var(--ink);color:var(--paper)}
+.print-btn{
+  background:var(--ink) !important;color:var(--paper) !important;
+  cursor:pointer;border:none !important;padding:9px 16px !important;
+  font-family:inherit;font-size:11px;
+}
+
+/* PAGE */
+.page{
+  width:210mm;min-height:297mm;
+  background:var(--paper);
+  margin:0 auto 24px;
+  padding:14mm 14mm;
+  box-shadow:0 4px 20px rgba(0,0,0,0.15);
+  position:relative;
+  display:flex;flex-direction:column;
+}
+
+.page-header{
+  display:flex;justify-content:space-between;align-items:flex-end;
+  border-bottom:2px solid var(--ink);
+  padding-bottom:8px;margin-bottom:12px;
+}
+.page-header h1{
+  font-family:'Fraunces',serif;font-weight:900;
+  font-size:28px;line-height:0.95;letter-spacing:-0.02em;
+}
+.page-header h1 em{font-style:italic;color:var(--accent);font-weight:400}
+.page-header .meta{
+  font-family:'JetBrains Mono',monospace;font-size:9px;
+  text-align:right;color:var(--muted);
+  text-transform:uppercase;letter-spacing:0.08em;line-height:1.4;
+}
+
+.page-footer{
+  margin-top:auto;
+  padding-top:8px;border-top:1px solid var(--ink);
+  display:flex;justify-content:space-between;
+  font-family:'JetBrains Mono',monospace;font-size:9px;
+  color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;
+}
+
+/* GRID */
+.col-2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:6px}
+.col-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:6px}
+.col-4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px;margin-bottom:6px}
+
+/* SECTION */
+.s{
+  border:1px solid var(--ink);
+  padding:8px 10px;
+  background:var(--paper);
+  break-inside:avoid;
+  page-break-inside:avoid;
+  display:flex;flex-direction:column;
+}
+.s-title{
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px;text-transform:uppercase;letter-spacing:0.1em;
+  color:var(--accent);font-weight:700;
+  border-bottom:1px solid var(--ink);
+  padding-bottom:3px;margin-bottom:6px;
+  display:flex;justify-content:space-between;
+}
+.s-title .num{color:var(--muted);font-weight:400}
+.s.green .s-title{color:var(--accent-2)}
+.s.green{border-color:var(--accent-2)}
+.s.blue .s-title{color:var(--accent-3)}
+.s.blue{border-color:var(--accent-3)}
+
+/* FORMULAS */
+.f{
+  font-size:10.5px;line-height:1.4;
+  margin-bottom:4px;
+  display:flex;flex-direction:column;
+}
+.f .nm{
+  font-family:'JetBrains Mono',monospace;font-size:8px;
+  text-transform:uppercase;letter-spacing:0.06em;
+  color:var(--muted);font-weight:700;
+}
+.f .eq{
+  font-size:12px;margin:2px 0;
+}
+.f-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:4px 12px;
+}
+.katex{font-size:1.1em !important}
+
+/* INLINE LIST */
+.kw{
+  font-size:10px;line-height:1.5;
+}
+.kw strong{
+  color:var(--ink);font-weight:700;
+}
+.kw em{
+  color:var(--accent);font-style:normal;font-weight:600;
+}
+.kw .sep{color:var(--muted);margin:0 4px}
+
+/* TABLE */
+table{
+  width:100%;border-collapse:collapse;
+  font-size:9.5px;
+}
+th,td{
+  padding:3px 5px;border:1px solid var(--ink);
+  text-align:left;
+}
+th{
+  background:var(--ink);color:var(--paper);
+  font-family:'JetBrains Mono',monospace;font-size:8px;
+  text-transform:uppercase;letter-spacing:0.06em;
+  font-weight:700;
+}
+
+/* BIG TITLE */
+.big-formula{
+  background:var(--ink);color:var(--paper);
+  padding:6px 10px;text-align:center;
+  margin:4px 0;
+}
+.big-formula .nm{
+  color:var(--accent);font-family:'JetBrains Mono',monospace;
+  font-size:8px;text-transform:uppercase;letter-spacing:0.1em;
+  font-weight:700;
+}
+.big-formula .eq{font-size:13px;margin-top:2px}
+.big-formula .katex{color:var(--paper) !important}
+
+/* CHAIN */
+.chain{
+  display:grid;grid-template-columns:repeat(6,1fr);
+  gap:0;border:1px solid var(--ink);margin:4px 0;
+}
+.chain > div{
+  padding:4px 6px;border-right:1px solid var(--ink);
+  text-align:center;font-size:9px;line-height:1.2;
+}
+.chain > div:last-child{border-right:none}
+.chain b{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--accent)}
+
+/* PRINT */
+@media print{
+  body{background:white;padding:0}
+  .toolbar{display:none}
+  .page{
+    box-shadow:none;margin:0;
+    width:210mm;height:297mm;
+    page-break-after:always;
+  }
+  .page:last-child{page-break-after:auto}
+}
+
+@media (max-width:780px){
+  .page{width:100%;padding:14px;min-height:auto}
+  .col-2,.col-3,.col-4,.f-grid{grid-template-columns:1fr}
+  .chain{grid-template-columns:repeat(3,1fr)}
+}
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <a href="index.html">← Retour au sommaire</a>
+  <button class="print-btn" onclick="window.print()">🖨 Imprimer (2 pages)</button>
+</div>
+
+<!-- ================ PAGE 1 ================ -->
+<div class="page">
+
+  <div class="page-header">
+    <h1>BTS&nbsp;CIEL · <em>physique</em></h1>
+    <div class="meta">
+      Fiche express 2 pages<br>
+      Options A &amp; B · Conforme RPF V2<br>
+      Page 1/2 — Cœur du programme
+    </div>
+  </div>
+
+  <!-- ÉLECTRICITÉ -->
+  <div class="col-2">
+    <div class="s">
+      <div class="s-title"><span>Électricité — régime continu</span><span class="num">§5.1</span></div>
+      <div class="f-grid">
+        <div class="f"><span class="nm">Loi d'Ohm</span><span class="eq">$U = R\,I$</span></div>
+        <div class="f"><span class="nm">Diviseur tension</span><span class="eq">$U_2 = U\dfrac{R_2}{R_1+R_2}$</span></div>
+        <div class="f"><span class="nm">R série</span><span class="eq">$R_{éq} = R_1+R_2$</span></div>
+        <div class="f"><span class="nm">R parallèle</span><span class="eq">$R_{éq} = \dfrac{R_1 R_2}{R_1+R_2}$</span></div>
+        <div class="f"><span class="nm">Puissance</span><span class="eq">$P = UI = RI^2 = U^2/R$</span></div>
+        <div class="f"><span class="nm">Autonomie batterie</span><span class="eq">$t = Q/I$</span></div>
+      </div>
+      <p class="kw"><strong>Loi des mailles</strong> Σ U = 0 <span class="sep">·</span> <strong>Loi des nœuds</strong> Σ I<sub>e</sub> = Σ I<sub>s</sub></p>
+    </div>
+
+    <div class="s">
+      <div class="s-title"><span>Électricité — régime sinusoïdal</span><span class="num">§5.2</span></div>
+      <div class="f-grid">
+        <div class="f"><span class="nm">Sinus</span><span class="eq">$u(t) = U_m\cos(\omega t + \varphi)$</span></div>
+        <div class="f"><span class="nm">Pulsation</span><span class="eq">$\omega = 2\pi f \;;\; T = 1/f$</span></div>
+        <div class="f"><span class="nm">Valeur efficace</span><span class="eq">$U_{eff} = U_m/\sqrt{2}$</span></div>
+        <div class="f"><span class="nm">P active</span><span class="eq">$P = U_{eff} I_{eff} \cos\varphi$</span></div>
+        <div class="f"><span class="nm">Impédance R</span><span class="eq">$\underline{Z}_R = R$</span></div>
+        <div class="f"><span class="nm">Impédance C</span><span class="eq">$\underline{Z}_C = \dfrac{1}{jC\omega}$</span></div>
+        <div class="f"><span class="nm">Impédance L</span><span class="eq">$\underline{Z}_L = jL\omega$</span></div>
+        <div class="f"><span class="nm">Loi d'Ohm cplx</span><span class="eq">$\underline{U}=\underline{Z}\,\underline{I}$</span></div>
+      </div>
+      <p class="kw"><strong>TBF</strong> : C → ∞ (ouvert), L → 0 (court-circuit) <span class="sep">·</span> <strong>HF</strong> : inverse</p>
+    </div>
+  </div>
+
+  <!-- DÉCIBELS -->
+  <div class="s green">
+    <div class="s-title"><span>Décibels — incontournable</span><span class="num">§5.2-5.3</span></div>
+    <div class="col-4" style="margin-bottom:2px">
+      <div class="f"><span class="nm">Gain tension/amplitude</span><span class="eq">$G_{dB} = 20\log A$</span></div>
+      <div class="f"><span class="nm">Gain puissance</span><span class="eq">$G_{dB} = 10\log(P_s/P_e)$</span></div>
+      <div class="f"><span class="nm">P en dBm</span><span class="eq">$P_{dBm} = 10\log(P/1\text{mW})$</span></div>
+      <div class="f"><span class="nm">U en dBV</span><span class="eq">$U_{dBV} = 20\log(U/1\text{V})$</span></div>
+    </div>
+    <p class="kw"><em>Mémo :</em> +20 dB = ×10 <span class="sep">·</span> +6 dB ≈ ×2 <span class="sep">·</span> +3 dB ≈ ×√2 <span class="sep">·</span> 0 dBm = 1 mW <span class="sep">·</span> 20 dBm = 100 mW <span class="sep">·</span> 30 dBm = 1 W</p>
+  </div>
+
+  <!-- ACQUÉRIR + TRAITER -->
+  <div class="col-2">
+    <div class="s">
+      <div class="s-title"><span>Thème 1 — Acquérir</span><span class="num">§T1</span></div>
+      <p class="kw"><strong>Capteur</strong> : grandeur physique → signal. Types : <em>analogique</em>, <em>numérique</em>, <em>T.O.R.</em>, <em>intelligent</em>.</p>
+      <div class="f-grid" style="margin-top:4px">
+        <div class="f"><span class="nm">Sensibilité</span><span class="eq">$S = \dfrac{\Delta s}{\Delta e}$</span></div>
+        <div class="f"><span class="nm">Étendue mesure</span><span class="eq">$E.M. = e_{\max}-e_{\min}$</span></div>
+      </div>
+      <p class="kw" style="margin-top:4px"><strong>Datasheet :</strong> sensibilité, résolution, linéarité, plage, alim, type de sortie.</p>
+    </div>
+
+    <div class="s">
+      <div class="s-title"><span>Thème 2 — Traiter (CAN)</span><span class="num">§T2</span></div>
+      <div class="big-formula">
+        <span class="nm">Condition de Shannon</span>
+        <div class="eq">$f_e > 2\,f_{\max}$</div>
+      </div>
+      <div class="f-grid">
+        <div class="f"><span class="nm">Quantum CAN</span><span class="eq">$q = V_{PE}/2^N$</span></div>
+        <div class="f"><span class="nm">Quantum chaîne</span><span class="eq">$q_{ch} = q/(S\cdot A)$</span></div>
+        <div class="f"><span class="nm">Code numérique</span><span class="eq">$N = \text{ent}(V_e/q)$</span></div>
+        <div class="f"><span class="nm">Filtre anti-repli.</span><span class="eq">$f_c \le f_e/2$</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="s">
+    <div class="s-title"><span>Chaîne de mesure complète</span><span class="num">§T2</span></div>
+    <div class="chain">
+      <div><b>1</b><br>Capteur</div>
+      <div><b>2</b><br>Conditionneur<br>(pont div., Wheatstone, 4-20mA)</div>
+      <div><b>3</b><br>Amplification<br>+ décalage</div>
+      <div><b>4</b><br>Filtre anti-repli.<br>(passe-bas)</div>
+      <div><b>5</b><br>CAN<br>(éch. + quant.)</div>
+      <div><b>6</b><br>Traitement<br>µC / DSP</div>
+    </div>
+  </div>
+
+  <!-- TRANSPORTER -->
+  <div class="s">
+    <div class="s-title"><span>Thème 3 — Transporter (ondes &amp; transmission)</span><span class="num">§T3</span></div>
+    <div class="col-3">
+      <div>
+        <div class="big-formula">
+          <span class="nm">Relation fondamentale</span>
+          <div class="eq">$\lambda = c/f$</div>
+        </div>
+        <p class="kw"><strong>c</strong> = 3·10⁸ m/s (vide) <span class="sep">·</span> <em>v = c/n</em> dans un milieu</p>
+      </div>
+      <div>
+        <div class="big-formula">
+          <span class="nm">Friis (bilan liaison)</span>
+          <div class="eq">$P_r = P_e G_e G_r \left(\dfrac{\lambda}{4\pi d}\right)^2$</div>
+        </div>
+        <p class="kw" style="font-size:9px">En dB : $P_r = P_e + G_e + G_r - L_{FS}$</p>
+      </div>
+      <div>
+        <div class="big-formula">
+          <span class="nm">P.I.R.E.</span>
+          <div class="eq">$P_{IRE} = P_e \cdot G_e$</div>
+        </div>
+        <p class="kw" style="font-size:9px"><strong>Antenne λ/2</strong> : ℓ = λ/2 <span class="sep">·</span> <strong>Wi-Fi FR</strong> ≤ 100 mW</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-2">
+    <div class="s">
+      <div class="s-title"><span>Lignes de transmission</span></div>
+      <p class="kw"><strong>Z<sub>c</sub></strong> impédance caractéristique. <em>Adaptée</em> : Z<sub>L</sub>=Z<sub>c</sub>, pas de réflexion.</p>
+      <table style="margin-top:4px">
+        <tr><th>Bout de ligne</th><th>Effet</th></tr>
+        <tr><td>Adaptée Z<sub>L</sub>=Z<sub>c</sub></td><td>Pas d'écho</td></tr>
+        <tr><td>Court-circuit</td><td>Écho inversé après 2τ</td></tr>
+        <tr><td>Circuit ouvert</td><td>Écho en phase après 2τ</td></tr>
+      </table>
+      <p class="kw" style="margin-top:4px"><strong>Réflectométrie</strong> : $L = v\Delta t / 2$</p>
+    </div>
+
+    <div class="s">
+      <div class="s-title"><span>Transmission numérique</span></div>
+      <div class="f-grid">
+        <div class="f"><span class="nm">Débit binaire</span><span class="eq">$D = R\log_2(M)$</span></div>
+        <div class="f"><span class="nm">Durée bit</span><span class="eq">$T_b = 1/D$</span></div>
+        <div class="f"><span class="nm">Effic. spectrale</span><span class="eq">$\eta = D/B$</span></div>
+        <div class="f"><span class="nm">TEB / BER</span><span class="eq">$N_{faux}/N_{total}$</span></div>
+      </div>
+      <p class="kw" style="margin-top:3px"><strong>Modulations :</strong> <em>ASK</em> · <em>PSK</em> · <em>QAM</em> · <em>FSK</em> · <em>GMSK</em> <span class="sep">·</span> <strong>Codages :</strong> NRZ, Manchester, UART</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>BTS CIEL · Physique · Fiche express</span>
+    <span>· 1 / 2 ·</span>
+    <span>github.com/DonaldSe/bts-ciel-revision</span>
+  </div>
+</div>
+
+<!-- ================ PAGE 2 ================ -->
+<div class="page">
+
+  <div class="page-header">
+    <h1>BTS&nbsp;CIEL · <em>physique</em></h1>
+    <div class="meta">
+      Fiche express 2 pages<br>
+      Options A &amp; B · Conforme RPF V2<br>
+      Page 2/2 — Filtres &amp; mesures
+    </div>
+  </div>
+
+  <!-- SIGNAUX -->
+  <div class="s">
+    <div class="s-title"><span>Thème transversal — Signaux (temporel &amp; fréquentiel)</span><span class="num">§6</span></div>
+    <div class="col-3">
+      <div class="f"><span class="nm">Valeur moyenne</span><span class="eq">$\langle u \rangle = \dfrac{1}{T}\int_0^T u(t)\,dt$</span></div>
+      <div class="f"><span class="nm">Valeur efficace (RMS)</span><span class="eq">$U_{eff} = \sqrt{\dfrac{1}{T}\int_0^T u^2\,dt}$</span></div>
+      <div class="f"><span class="nm">Crête à crête</span><span class="eq">$U_{cc} = U_{\max}-U_{\min}$</span></div>
+      <div class="f"><span class="nm">SNR (dB)</span><span class="eq">$10\log(P_s/P_b)$</span></div>
+      <div class="f"><span class="nm">Spectre raie</span><span class="eq">$f_0$ fondamental, $nf_0$ harmonique n</span></div>
+      <div class="f"><span class="nm">Encombrement B</span><span class="eq">Largeur du spectre</span></div>
+    </div>
+    <p class="kw"><strong>Fourier :</strong> tout signal périodique = composante continue + fondamental + harmoniques. <em>Bruit</em> = densité spectrale étalée.</p>
+  </div>
+
+  <!-- FILTRAGE -->
+  <div class="s">
+    <div class="s-title"><span>Thème transversal — Filtrage</span><span class="num">§7</span></div>
+    <div class="col-2">
+      <div>
+        <div class="big-formula">
+          <span class="nm">Transmittance 1er ordre passe-bas</span>
+          <div class="eq">$\underline{T}(j\omega) = \dfrac{T_0}{1 + j\omega/\omega_0}$</div>
+        </div>
+        <div class="f-grid" style="margin-top:4px">
+          <div class="f"><span class="nm">Filtre RC, f<sub>c</sub></span><span class="eq">$f_c = \dfrac{1}{2\pi RC}$</span></div>
+          <div class="f"><span class="nm">τ ↔ ω₀</span><span class="eq">$\tau = 1/\omega_0$</span></div>
+          <div class="f"><span class="nm">A ↔ G</span><span class="eq">$A = 10^{G/20}$</span></div>
+          <div class="f"><span class="nm">Pente 1er ordre</span><span class="eq">−20 dB/déc = −6 dB/oct</span></div>
+        </div>
+      </div>
+      <div>
+        <table>
+          <tr><th>Type</th><th>Atténue</th><th>Usage</th></tr>
+          <tr><td>Passe-bas</td><td>HF</td><td>Anti-repli., lissage</td></tr>
+          <tr><td>Passe-haut</td><td>BF</td><td>Couplage AC</td></tr>
+          <tr><td>Passe-bande</td><td>Hors bande</td><td>Sélection canal</td></tr>
+          <tr><td>Coupe-bande</td><td>Une bande</td><td>Rejet 50 Hz</td></tr>
+        </table>
+        <p class="kw" style="margin-top:6px"><strong>Bode :</strong> gain $G = 20\log|T|$, phase $\varphi$ en ° en fonction de $\log f$. À $f_c$ : $G = G_0 - 3$ dB.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-2">
+    <div class="s">
+      <div class="s-title"><span>Réponse à un échelon</span></div>
+      <div class="f"><span class="nm">1er ordre</span><span class="eq">$s(t) = T_0 E(1 - e^{-t/\tau})$</span></div>
+      <p class="kw" style="margin-top:3px"><strong>τ :</strong> 63% à $t = \tau$ · tangente à l'origine coupe asymptote à τ <span class="sep">·</span> <strong>t<sub>r,5%</sub> ≈ 3τ</strong></p>
+      <p class="kw" style="margin-top:3px"><strong>2e ordre :</strong> $m&gt;1$ apériodique <span class="sep">·</span> $m=1$ critique <span class="sep">·</span> $m&lt;1$ dépassement</p>
+    </div>
+
+    <div class="s">
+      <div class="s-title"><span>Filtres numériques</span></div>
+      <p class="kw"><strong>Récurrence :</strong> $y_n = \Sigma b_k x_{n-k} - \Sigma a_k y_{n-k}$</p>
+      <table style="margin-top:4px">
+        <tr><th>Type</th><th>a<sub>k</sub></th><th>Stabilité</th></tr>
+        <tr><td>RIF (FIR)</td><td>= 0</td><td>Toujours stable</td></tr>
+        <tr><td>RII (IIR)</td><td>≠ 0</td><td>Peut diverger</td></tr>
+      </table>
+      <p class="kw" style="margin-top:3px">Tracé limité à <strong>f ≤ f<sub>e</sub>/2</strong> (Shannon)</p>
+    </div>
+  </div>
+
+  <!-- UTILISER -->
+  <div class="s">
+    <div class="s-title"><span>Thème 4 — Utiliser (asservissement)</span><span class="num">§T4</span></div>
+    <div class="col-2">
+      <div>
+        <div class="chain" style="grid-template-columns:repeat(5,1fr)">
+          <div><b>+</b><br>Compar.<br>ε = c−m</div>
+          <div><b>C</b><br>Correcteur<br>P/PI/PID</div>
+          <div><b>G</b><br>Système</div>
+          <div><b>→</b><br>Sortie</div>
+          <div><b>H</b><br>Capteur<br>retour m</div>
+        </div>
+        <p class="kw" style="margin-top:4px"><strong>3 critères :</strong> <em>rapidité</em> (t<sub>r,5%</sub>) <span class="sep">·</span> <em>précision</em> (ε∞) <span class="sep">·</span> <em>stabilité</em></p>
+        <div class="f" style="margin-top:3px"><span class="nm">PWM (commande actionneur)</span><span class="eq">$\langle V \rangle = \alpha\,V_{\max}$, $\alpha = t_{on}/T$</span></div>
+      </div>
+      <div>
+        <table>
+          <tr><th>Action</th><th>Stab.</th><th>Préc.</th><th>Rapid.</th></tr>
+          <tr><td><strong>P</strong></td><td>↓</td><td>↑</td><td>↑</td></tr>
+          <tr><td><strong>I</strong></td><td>↓</td><td>ε∞ = 0</td><td>≈</td></tr>
+          <tr><td><strong>D</strong></td><td>↑</td><td>—</td><td>↑</td></tr>
+        </table>
+        <p class="kw" style="margin-top:4px"><strong>Option B :</strong> critère du revers en Bode <span class="sep">·</span> M<sub>φ</sub> &gt; 45° <span class="sep">·</span> M<sub>G</sub> &gt; 6 dB</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MESURES -->
+  <div class="s blue">
+    <div class="s-title"><span>Mesures &amp; incertitudes</span><span class="num">§8</span></div>
+    <div class="col-3">
+      <div class="f"><span class="nm">Erreur absolue</span><span class="eq">$\Delta x = x_{mes} - x_{vraie}$</span></div>
+      <div class="f"><span class="nm">Erreur relative</span><span class="eq">$\Delta x / x$ &nbsp;[%]</span></div>
+      <div class="f"><span class="nm">Type A (statistique)</span><span class="eq">$u_A = \sigma/\sqrt{n}$</span></div>
+      <div class="f"><span class="nm">Type B (rectangulaire)</span><span class="eq">$u_B = \Delta/\sqrt{3}$</span></div>
+      <div class="f"><span class="nm">Écriture résultat</span><span class="eq">$x = (\text{val} \pm u)$ [unité]</span></div>
+      <div class="f"><span class="nm">Conformité CDC</span><span class="eq">vraie ∈ [x ± 2u]</span></div>
+    </div>
+    <p class="kw"><strong>Justesse</strong> = proche de la valeur vraie <span class="sep">·</span> <strong>Fidélité</strong> = faible dispersion <span class="sep">·</span> Incertitude arrondie à <em>1 ou 2 chiffres significatifs</em></p>
+  </div>
+
+  <!-- STANDARDS -->
+  <div class="s">
+    <div class="s-title"><span>Standards à reconnaître</span><span class="num">§T3</span></div>
+    <table>
+      <tr><th>Standard</th><th>Type</th><th>Application typique</th></tr>
+      <tr><td>RS-232</td><td>Asynchrone, non-différentiel, ±12V</td><td>Liaison série point-à-point</td></tr>
+      <tr><td>RS-485</td><td>Asynchrone, différentiel, multipoint</td><td>Bus industriel</td></tr>
+      <tr><td>I²C</td><td>Synchrone, 2 fils (SDA/SCL)</td><td>Capteurs, EEPROM</td></tr>
+      <tr><td>SPI</td><td>Synchrone, 4 fils, full-duplex</td><td>Mémoires, écrans, ADC rapides</td></tr>
+      <tr><td>CAN (opt. B)</td><td>Diff., priorité</td><td>Automobile, automation</td></tr>
+      <tr><td>Wi-Fi 2,4/5 GHz</td><td>OFDM (QPSK→1024-QAM)</td><td>Réseau local sans fil</td></tr>
+      <tr><td>Bluetooth 2,4 GHz</td><td>GFSK / π/4-DQPSK</td><td>Périphériques courte portée</td></tr>
+      <tr><td>LoRa 868 MHz</td><td>CSS (chirp spread spectrum)</td><td>IoT longue portée</td></tr>
+    </table>
+  </div>
+
+  <!-- AVERTISSEMENT FINAL -->
+  <div class="s green" style="background:var(--ink);color:var(--paper);border-color:var(--ink)">
+    <div class="s-title" style="border-color:var(--paper);color:var(--accent)"><span>À CONNAÎTRE PAR CŒUR — PRIORITÉ MAX</span><span class="num" style="color:var(--paper)">★</span></div>
+    <p class="kw" style="color:var(--paper);font-size:11px;line-height:1.6">
+      <strong style="color:var(--paper)">Ohm</strong> $U=RI$ <span class="sep">·</span>
+      <strong style="color:var(--paper)">Diviseur</strong> $U_2=U R_2/(R_1+R_2)$ <span class="sep">·</span>
+      <strong style="color:var(--paper)">Shannon</strong> $f_e &gt; 2f_{\max}$ <span class="sep">·</span>
+      <strong style="color:var(--paper)">Quantum</strong> $q = V_{PE}/2^N$ <span class="sep">·</span>
+      <strong style="color:var(--paper)">Gain dB</strong> $G = 20\log A$ <span class="sep">·</span>
+      <strong style="color:var(--paper)">Onde</strong> $\lambda = c/f$ <span class="sep">·</span>
+      <strong style="color:var(--paper)">Friis</strong> (fournie) <span class="sep">·</span>
+      <strong style="color:var(--paper)">RC</strong> $f_c = 1/2\pi RC$ <span class="sep">·</span>
+      <strong style="color:var(--paper)">τ</strong> $= 1/\omega_0$ <span class="sep">·</span>
+      <strong style="color:var(--paper)">P sinus</strong> $= U_{eff}I_{eff}\cos\varphi$ <span class="sep">·</span>
+      <strong style="color:var(--paper)">Débit</strong> $D = R\log_2 M$
+    </p>
+  </div>
+
+  <div class="page-footer">
+    <span>BTS CIEL · Physique · Fiche express</span>
+    <span>· 2 / 2 ·</span>
+    <span>github.com/DonaldSe/bts-ciel-revision</span>
+  </div>
+</div>
+
+</body>
+</html>

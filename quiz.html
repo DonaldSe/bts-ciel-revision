@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BTS CIEL · Quiz Physique</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter+Tight:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<style>
+:root{
+  --bg:#f4f1ea;
+  --paper:#fbf9f3;
+  --ink:#1a1614;
+  --accent:#c2410c;
+  --accent-2:#0f5e3f;
+  --accent-3:#1e3a8a;
+  --muted:#6b6258;
+  --success:#0f5e3f;
+  --error:#b91c1c;
+  --grid:rgba(26,22,20,0.06);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter Tight',system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.55;
+  min-height:100vh;
+  background-image:
+    linear-gradient(var(--grid) 1px,transparent 1px),
+    linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:24px 24px;
+}
+
+.toolbar{
+  position:sticky;top:0;z-index:10;
+  background:var(--ink);color:var(--paper);
+  padding:14px 6vw;
+  display:flex;justify-content:space-between;align-items:center;
+  font-family:'JetBrains Mono',monospace;font-size:12px;
+  border-bottom:2px solid var(--accent);
+}
+.toolbar a{
+  color:var(--paper);text-decoration:none;
+  font-weight:600;letter-spacing:0.05em;text-transform:uppercase;font-size:11px;
+}
+.toolbar a:hover{color:var(--accent)}
+.toolbar .score-display{
+  color:var(--accent);font-weight:700;font-size:14px;
+}
+
+.masthead{
+  padding:48px 6vw 32px;
+  background:var(--paper);
+  border-bottom:3px double var(--ink);
+}
+.masthead .meta{
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:20px;
+}
+h1{
+  font-family:'Fraunces',serif;font-weight:900;
+  font-size:clamp(40px,7vw,88px);
+  line-height:0.9;letter-spacing:-0.03em;
+  margin-bottom:16px;
+}
+h1 em{font-style:italic;font-weight:400;color:var(--accent)}
+.lead{
+  font-family:'Fraunces',serif;font-size:20px;
+  font-style:italic;color:var(--muted);
+  max-width:780px;
+}
+
+main{padding:40px 6vw 96px;max-width:980px;margin:0 auto}
+
+/* PROGRESS */
+.progress-bar{
+  background:var(--paper);border:1px solid var(--ink);
+  margin-bottom:24px;height:14px;position:relative;
+  overflow:hidden;
+}
+.progress-fill{
+  height:100%;background:var(--accent);
+  width:0%;transition:width 0.4s ease;
+}
+.progress-label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;color:var(--muted);letter-spacing:0.08em;
+  margin-bottom:6px;text-transform:uppercase;
+  display:flex;justify-content:space-between;
+}
+
+/* QUESTION CARD */
+.question{
+  background:var(--paper);
+  border:2px solid var(--ink);
+  padding:32px;margin-bottom:24px;
+  position:relative;
+  scroll-margin-top:80px;
+}
+.q-header{
+  display:flex;justify-content:space-between;align-items:flex-start;
+  margin-bottom:16px;gap:16px;
+}
+.q-num{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:0.12em;
+  color:var(--accent);font-weight:700;
+  text-transform:uppercase;
+}
+.q-theme{
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  padding:3px 10px;background:var(--ink);color:var(--paper);
+  letter-spacing:0.08em;text-transform:uppercase;
+}
+.q-text{
+  font-family:'Fraunces',serif;font-size:22px;
+  font-weight:600;line-height:1.3;
+  letter-spacing:-0.01em;
+  margin-bottom:24px;
+}
+
+.options{display:flex;flex-direction:column;gap:8px}
+.option{
+  background:var(--bg);
+  border:1px solid var(--ink);
+  padding:14px 18px;
+  cursor:pointer;
+  display:flex;align-items:center;gap:12px;
+  transition:all 0.15s;
+  font-size:15px;line-height:1.4;
+  text-align:left;
+  font-family:inherit;color:var(--ink);
+}
+.option:hover{
+  background:var(--paper);
+  transform:translateX(4px);
+}
+.option .key{
+  font-family:'JetBrains Mono',monospace;
+  font-weight:700;font-size:13px;
+  border:1px solid var(--ink);
+  width:28px;height:28px;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--paper);
+  flex-shrink:0;
+}
+.option:hover .key{background:var(--ink);color:var(--paper)}
+
+.option.selected{
+  background:var(--paper);
+  border-width:2px;
+}
+.option.correct{
+  background:var(--success);color:var(--paper);
+  border-color:var(--success);
+}
+.option.correct .key{background:var(--paper);color:var(--success)}
+.option.wrong{
+  background:var(--error);color:var(--paper);
+  border-color:var(--error);
+}
+.option.wrong .key{background:var(--paper);color:var(--error)}
+.option.disabled{cursor:not-allowed;pointer-events:none}
+
+.explanation{
+  margin-top:20px;
+  background:var(--ink);color:var(--paper);
+  padding:20px 24px;
+  border-left:4px solid var(--accent);
+  display:none;
+}
+.explanation.show{display:block;animation:fadeIn 0.3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.explanation .label{
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  color:var(--accent);letter-spacing:0.12em;
+  text-transform:uppercase;font-weight:700;
+  margin-bottom:8px;
+}
+.explanation .text{
+  font-family:'Fraunces',serif;font-size:16px;
+  line-height:1.5;
+}
+.explanation .katex{color:var(--paper)!important}
+
+/* RESULT */
+.result{
+  background:var(--ink);color:var(--paper);
+  padding:48px 32px;
+  text-align:center;
+  margin-top:32px;
+  display:none;
+}
+.result.show{display:block}
+.result .num{
+  font-family:'Fraunces',serif;font-weight:900;
+  font-size:96px;line-height:1;
+  color:var(--accent);
+}
+.result h2{
+  font-family:'Fraunces',serif;font-size:36px;
+  font-weight:600;font-style:italic;
+  margin:8px 0 16px;
+}
+.result p{font-family:'JetBrains Mono',monospace;font-size:13px;line-height:1.6;color:#d4d0c4}
+.result button{
+  margin-top:24px;
+  background:var(--accent);color:var(--paper);
+  border:none;padding:14px 28px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;text-transform:uppercase;
+  letter-spacing:0.1em;font-weight:700;
+  cursor:pointer;
+}
+.result button:hover{background:var(--paper);color:var(--ink)}
+
+/* THEME COLOR */
+.q-theme.t1{background:#fce7f3;color:var(--ink)}
+.q-theme.t2{background:#dbeafe;color:var(--ink)}
+.q-theme.t3{background:#dcfce7;color:var(--ink)}
+.q-theme.t4{background:#fef3c7;color:var(--ink)}
+.q-theme.tt{background:var(--accent);color:var(--paper)}
+
+@media (max-width:640px){
+  .masthead{padding:32px 5vw 24px}
+  main{padding:24px 5vw 64px}
+  .question{padding:24px 20px}
+  .q-text{font-size:18px}
+}
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <a href="index.html">← Sommaire</a>
+  <span class="score-display">Score : <span id="liveScore">0</span> / 30</span>
+  <a href="fiche-complete.html">Fiche complète →</a>
+</div>
+
+<header class="masthead">
+  <div class="meta">BTS CIEL · Quiz Physique · 30 questions</div>
+  <h1>Teste tes<br><em>connaissances.</em></h1>
+  <p class="lead">30 questions à choix multiple sur le programme complet. Correction immédiate avec explications. Vise les <strong>25/30</strong> pour être prêt(e).</p>
+</header>
+
+<main>
+
+<div class="progress-label">
+  <span>Progression</span>
+  <span id="progressText">0 / 30 répondues</span>
+</div>
+<div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+
+<div id="quizContainer"></div>
+
+<div class="result" id="result">
+  <div class="num" id="finalScore">0</div>
+  <h2 id="resultTitle">Résultat</h2>
+  <p id="resultMessage">—</p>
+  <button onclick="restartQuiz()">↻ Recommencer le quiz</button>
+</div>
+
+</main>
+
+<script>
+const questions = [
+  // ============== THÈME 1 - ACQUÉRIR ==============
+  {
+    theme: "T1 · Acquérir",
+    themeClass: "t1",
+    q: "Un capteur de température délivre 10 mV/°C. C'est sa :",
+    options: [
+      "Résolution",
+      "Sensibilité",
+      "Étendue de mesure",
+      "Linéarité"
+    ],
+    correct: 1,
+    explain: "La <strong>sensibilité</strong> $S = \\Delta s / \\Delta e$ exprime la variation de sortie par unité de variation d'entrée. Ici en mV par °C."
+  },
+  {
+    theme: "T1 · Acquérir",
+    themeClass: "t1",
+    q: "Parmi les types de capteurs, lequel n'a que deux états (binaire) ?",
+    options: [
+      "Capteur analogique",
+      "Capteur intégré",
+      "Capteur Tout-Ou-Rien (T.O.R.)",
+      "Capteur numérique"
+    ],
+    correct: 2,
+    explain: "Le capteur <strong>T.O.R.</strong> (Tout-Ou-Rien) ne fournit que 2 états : 0 ou 1. Ex. : fin de course, détecteur PIR."
+  },
+  {
+    theme: "T1 · Acquérir",
+    themeClass: "t1",
+    q: "Les 3 étapes d'un capteur intelligent sont :",
+    options: [
+      "Mesurer, transmettre, stocker",
+      "Entraînement, test, déploiement",
+      "Calibrer, filtrer, amplifier",
+      "Acquérir, traiter, transporter"
+    ],
+    correct: 1,
+    explain: "Un capteur intelligent embarque du traitement local (ML). Les 3 étapes sont : <em>entraînement</em>, <em>test</em>, puis <em>déploiement</em>."
+  },
+
+  // ============== THÈME 2 - TRAITER ==============
+  {
+    theme: "T2 · Traiter",
+    themeClass: "t2",
+    q: "La condition de Shannon impose, pour un signal de fréquence max $f_{max}$ :",
+    options: [
+      "$f_e = f_{max}$",
+      "$f_e \\geq f_{max}$",
+      "$f_e > 2 f_{max}$",
+      "$f_e < f_{max}/2$"
+    ],
+    correct: 2,
+    explain: "Théorème de Shannon-Nyquist : $f_e > 2 f_{max}$. En dessous, il y a <strong>repliement spectral</strong> (aliasing) et perte d'information."
+  },
+  {
+    theme: "T2 · Traiter",
+    themeClass: "t2",
+    q: "Un CAN 12 bits a une pleine échelle de 5 V. Son quantum vaut :",
+    options: [
+      "$5/12 \\approx 0{,}42$ V",
+      "$5/2^{12} \\approx 1{,}22$ mV",
+      "$5/2^{10} \\approx 4{,}88$ mV",
+      "$5 \\times 12 = 60$ V"
+    ],
+    correct: 1,
+    explain: "$q = V_{PE}/2^N = 5/4096 \\approx 1{,}22$ mV. C'est la plus petite variation de tension détectable."
+  },
+  {
+    theme: "T2 · Traiter",
+    themeClass: "t2",
+    q: "Le filtre anti-repliement est placé :",
+    options: [
+      "Après le CAN, en numérique",
+      "Avant l'échantillonneur, en analogique",
+      "Entre le capteur et le conditionneur",
+      "Dans le microcontrôleur uniquement"
+    ],
+    correct: 1,
+    explain: "Le filtre anti-repliement est un <strong>passe-bas analogique</strong> placé AVANT l'échantillonneur, avec $f_c \\leq f_e/2$, pour éliminer toute composante au-dessus de $f_e/2$."
+  },
+  {
+    theme: "T2 · Traiter",
+    themeClass: "t2",
+    q: "Un amplificateur a un gain de 40 dB. Son amplification vaut :",
+    options: [
+      "40",
+      "100",
+      "1000",
+      "10 000"
+    ],
+    correct: 1,
+    explain: "$A = 10^{G/20} = 10^{40/20} = 10^2 = 100$. Mémo : +20 dB = ×10 ; +40 dB = ×100 ; +60 dB = ×1000."
+  },
+  {
+    theme: "T2 · Traiter",
+    themeClass: "t2",
+    q: "Dans une boucle de courant 4-20 mA, que représente 4 mA ?",
+    options: [
+      "Le maximum de la grandeur",
+      "Le minimum de la grandeur",
+      "Une défaillance",
+      "Un signal de calibration"
+    ],
+    correct: 1,
+    explain: "4 mA = 0 % (minimum). 20 mA = 100 % (maximum). 0 mA = défaut/coupure (avantage du 4-20 par rapport au 0-20)."
+  },
+
+  // ============== THÈME 3 - TRANSPORTER ==============
+  {
+    theme: "T3 · Transporter",
+    themeClass: "t3",
+    q: "Une onde radio à 2,4 GHz a pour longueur d'onde environ :",
+    options: [
+      "1,25 mm",
+      "12,5 cm",
+      "1,25 m",
+      "12,5 m"
+    ],
+    correct: 1,
+    explain: "$\\lambda = c/f = 3 \\times 10^8 / 2{,}4 \\times 10^9 = 0{,}125$ m = 12,5 cm. C'est la fréquence Wi-Fi 2,4 GHz."
+  },
+  {
+    theme: "T3 · Transporter",
+    themeClass: "t3",
+    q: "Une ligne de transmission est dite <strong>adaptée</strong> quand :",
+    options: [
+      "Son impédance caractéristique vaut 50 Ω",
+      "L'impédance de la charge égale Z<sub>c</sub>",
+      "Sa longueur est un multiple de λ",
+      "Elle est en court-circuit"
+    ],
+    correct: 1,
+    explain: "Une ligne est adaptée quand $Z_L = Z_c$ : pas de réflexion, toute la puissance est transmise. Z<sub>c</sub> peut valoir 50, 75, 100 Ω… selon le standard."
+  },
+  {
+    theme: "T3 · Transporter",
+    themeClass: "t3",
+    q: "Dans une fibre optique, la lumière reste piégée dans le cœur grâce à :",
+    options: [
+      "L'effet Compton",
+      "La réfraction totale du cœur",
+      "La réflexion totale interne",
+      "L'absorption de la gaine"
+    ],
+    correct: 2,
+    explain: "Au-delà de l'angle critique $i_c$ tel que $\\sin i_c = n_2/n_1$ (avec $n_1 > n_2$), la lumière subit une <strong>réflexion totale interne</strong> et se propage en zigzag dans le cœur."
+  },
+  {
+    theme: "T3 · Transporter",
+    themeClass: "t3",
+    q: "Une antenne dipôle accordée à 100 MHz aura une longueur d'environ :",
+    options: [
+      "0,75 cm",
+      "15 cm",
+      "1,5 m",
+      "15 m"
+    ],
+    correct: 2,
+    explain: "$\\lambda = c/f = 3 \\cdot 10^8 / 10^8 = 3$ m. Un dipôle demi-onde mesure $\\ell = \\lambda/2 = 1{,}5$ m."
+  },
+  {
+    theme: "T3 · Transporter",
+    themeClass: "t3",
+    q: "La P.I.R.E. d'un émetteur Wi-Fi est limitée en France à 100 mW. En dBm :",
+    options: [
+      "10 dBm",
+      "20 dBm",
+      "30 dBm",
+      "100 dBm"
+    ],
+    correct: 1,
+    explain: "$P_{dBm} = 10 \\log(P/1\\text{mW}) = 10\\log(100) = 20$ dBm. Mémo : 0 dBm = 1 mW ; 20 dBm = 100 mW ; 30 dBm = 1 W."
+  },
+  {
+    theme: "T3 · Transporter",
+    themeClass: "t3",
+    q: "En modulation 16-QAM, chaque symbole transporte combien de bits ?",
+    options: [
+      "1 bit",
+      "2 bits",
+      "4 bits",
+      "16 bits"
+    ],
+    correct: 2,
+    explain: "Pour une modulation M-aire, chaque symbole code $\\log_2(M)$ bits. Pour 16-QAM : $\\log_2(16) = 4$ bits par symbole."
+  },
+  {
+    theme: "T3 · Transporter",
+    themeClass: "t3",
+    q: "Un bus à 9600 bauds, codage NRZ binaire (M=2). Le débit binaire est :",
+    options: [
+      "4800 bit/s",
+      "9600 bit/s",
+      "19 200 bit/s",
+      "96 000 bit/s"
+    ],
+    correct: 1,
+    explain: "$D = R \\cdot \\log_2(M) = 9600 \\cdot 1 = 9600$ bit/s. En binaire (M=2), débit binaire = débit de symboles (en bauds)."
+  },
+  {
+    theme: "T3 · Transporter",
+    themeClass: "t3",
+    q: "Le standard RS-485 se distingue du RS-232 principalement par :",
+    options: [
+      "Une vitesse plus faible",
+      "Une transmission différentielle",
+      "L'absence de masse",
+      "Un codage Manchester"
+    ],
+    correct: 1,
+    explain: "RS-485 utilise une <strong>transmission différentielle</strong> (paire torsadée A/B) qui rejette le bruit de mode commun. RS-232 est non-différentiel, ±12 V."
+  },
+  {
+    theme: "T3 · Transporter",
+    themeClass: "t3",
+    q: "Sur un chronogramme de ligne en circuit ouvert, l'écho à l'entrée est :",
+    options: [
+      "Absent (pas de réflexion)",
+      "Inversé après 2τ",
+      "En phase, après 2τ",
+      "Atténué de moitié seulement"
+    ],
+    correct: 2,
+    explain: "Circuit ouvert : réflexion totale en phase. Court-circuit : réflexion totale inversée. Adaptée : pas d'écho. Le temps 2τ correspond à l'aller-retour dans la ligne."
+  },
+
+  // ============== THÈME 4 - UTILISER ==============
+  {
+    theme: "T4 · Utiliser",
+    themeClass: "t4",
+    q: "Dans un signal PWM, le rapport cyclique vaut 25 % et $V_{max}$ = 12 V. La valeur moyenne est :",
+    options: [
+      "3 V",
+      "6 V",
+      "9 V",
+      "12 V"
+    ],
+    correct: 0,
+    explain: "$\\langle V \\rangle = \\alpha \\cdot V_{max} = 0{,}25 \\times 12 = 3$ V. C'est ce qui permet de varier la puissance d'un moteur DC avec un PWM."
+  },
+  {
+    theme: "T4 · Utiliser",
+    themeClass: "t4",
+    q: "L'action <strong>intégrale (I)</strong> d'un correcteur PID a pour effet principal :",
+    options: [
+      "D'améliorer la rapidité",
+      "D'annuler l'erreur statique",
+      "D'augmenter la stabilité",
+      "D'amplifier les perturbations"
+    ],
+    correct: 1,
+    explain: "L'action <strong>I</strong> annule l'erreur statique ($\\varepsilon_{\\infty} = 0$) en intégrant l'écart dans le temps. Inconvénient : elle dégrade la stabilité."
+  },
+  {
+    theme: "T4 · Utiliser",
+    themeClass: "t4",
+    q: "Les 3 critères de performance d'un système bouclé sont :",
+    options: [
+      "Linéarité, sensibilité, bande passante",
+      "Rapidité, précision, stabilité",
+      "Gain, phase, fréquence",
+      "Coût, taille, consommation"
+    ],
+    correct: 1,
+    explain: "Triptyque fondamental de l'asservissement : <strong>rapidité</strong> ($t_{r,5\\%}$), <strong>précision</strong> ($\\varepsilon_\\infty$), <strong>stabilité</strong> (pas de divergence)."
+  },
+
+  // ============== ÉLECTRICITÉ ==============
+  {
+    theme: "Transversal · Élec",
+    themeClass: "tt",
+    q: "Deux résistances $R_1 = 100$ Ω et $R_2 = 100$ Ω en parallèle donnent une résistance équivalente de :",
+    options: [
+      "50 Ω",
+      "100 Ω",
+      "200 Ω",
+      "10 kΩ"
+    ],
+    correct: 0,
+    explain: "$R_{éq} = R_1 R_2 / (R_1 + R_2) = 100 \\cdot 100 / 200 = 50$ Ω. Deux résistances identiques en parallèle donnent la moitié."
+  },
+  {
+    theme: "Transversal · Élec",
+    themeClass: "tt",
+    q: "La tension efficace du secteur en France est 230 V. La tension crête vaut :",
+    options: [
+      "230 V",
+      "≈ 162 V",
+      "≈ 325 V",
+      "≈ 460 V"
+    ],
+    correct: 2,
+    explain: "$U_m = U_{eff} \\cdot \\sqrt{2} = 230 \\times 1{,}414 \\approx 325$ V. La valeur crête est $\\sqrt{2}$ fois supérieure pour une sinusoïde pure."
+  },
+  {
+    theme: "Transversal · Élec",
+    themeClass: "tt",
+    q: "Une batterie de capacité 2 Ah alimente un circuit consommant 200 mA. Son autonomie est :",
+    options: [
+      "10 minutes",
+      "1 heure",
+      "10 heures",
+      "100 heures"
+    ],
+    correct: 2,
+    explain: "$t = Q/I = 2\\text{ Ah} / 0{,}2\\text{ A} = 10$ h. Attention aux unités : on divise des Ah par des A pour avoir des heures."
+  },
+  {
+    theme: "Transversal · Élec",
+    themeClass: "tt",
+    q: "Un condensateur en très haute fréquence se comporte comme :",
+    options: [
+      "Un circuit ouvert",
+      "Un court-circuit",
+      "Une résistance pure",
+      "Une bobine"
+    ],
+    correct: 1,
+    explain: "$Z_C = 1/(jC\\omega)$. Quand $\\omega \\to \\infty$ : $Z_C \\to 0$ → <strong>court-circuit</strong>. À l'inverse en TBF : ouvert. La bobine fait l'inverse."
+  },
+
+  // ============== FILTRES ==============
+  {
+    theme: "Transversal · Filtres",
+    themeClass: "tt",
+    q: "Un filtre RC passe-bas avec R = 1 kΩ et C = 1 µF a une fréquence de coupure de :",
+    options: [
+      "≈ 16 Hz",
+      "≈ 159 Hz",
+      "≈ 1 kHz",
+      "≈ 10 kHz"
+    ],
+    correct: 1,
+    explain: "$f_c = 1/(2\\pi RC) = 1/(2\\pi \\cdot 10^3 \\cdot 10^{-6}) = 1/(2\\pi \\cdot 10^{-3}) \\approx 159$ Hz."
+  },
+  {
+    theme: "Transversal · Filtres",
+    themeClass: "tt",
+    q: "À la fréquence de coupure d'un filtre passe-bas, le gain vaut :",
+    options: [
+      "$G_0$ (max)",
+      "$G_0 - 3$ dB",
+      "$G_0 - 6$ dB",
+      "$G_0 - 20$ dB"
+    ],
+    correct: 1,
+    explain: "Par convention, $f_c$ est définie au point où $|T| = T_0/\\sqrt{2}$, soit une chute de <strong>−3 dB</strong> par rapport au plateau."
+  },
+  {
+    theme: "Transversal · Filtres",
+    themeClass: "tt",
+    q: "Un filtre numérique RIF (à réponse impulsionnelle finie) est :",
+    options: [
+      "Toujours stable",
+      "Toujours instable",
+      "Stable si récursif",
+      "Stable si fe > 2 fmax"
+    ],
+    correct: 0,
+    explain: "Un filtre RIF est <strong>toujours stable</strong> car non récursif (pas de bouclage sur les sorties). Les RII (récursifs) peuvent diverger si mal conçus."
+  },
+
+  // ============== MESURES ==============
+  {
+    theme: "Transversal · Mesures",
+    themeClass: "tt",
+    q: "L'incertitude-type de type B pour une distribution rectangulaire de demi-largeur Δ est :",
+    options: [
+      "$u_B = \\Delta$",
+      "$u_B = \\Delta/2$",
+      "$u_B = \\Delta/\\sqrt{3}$",
+      "$u_B = \\Delta \\cdot \\sqrt{3}$"
+    ],
+    correct: 2,
+    explain: "$u_B = \\Delta/\\sqrt{3}$ pour une loi rectangulaire (résolution d'appareil, tolérance constructeur). Le type A se calcule statistiquement avec $u_A = \\sigma/\\sqrt{n}$."
+  },
+  {
+    theme: "Transversal · Mesures",
+    themeClass: "tt",
+    q: "La <strong>fidélité</strong> d'une mesure caractérise :",
+    options: [
+      "Sa proximité avec la valeur vraie",
+      "Sa reproductibilité (faible dispersion)",
+      "Sa rapidité d'exécution",
+      "Son coût économique"
+    ],
+    correct: 1,
+    explain: "<strong>Fidélité</strong> = reproductibilité (faible dispersion entre mesures répétées). <strong>Justesse</strong> = proximité avec la valeur vraie. Un appareil peut être fidèle sans être juste !"
+  },
+  {
+    theme: "Transversal · Mesures",
+    themeClass: "tt",
+    q: "Pour mesurer le courant traversant un composant, le multimètre se branche :",
+    options: [
+      "En parallèle, avec une forte impédance d'entrée",
+      "En série, avec une faible impédance d'entrée",
+      "Hors circuit, composant déconnecté",
+      "Indifféremment série ou parallèle"
+    ],
+    correct: 1,
+    explain: "L'<strong>ampèremètre se branche en série</strong>, idéalement avec une impédance d'entrée nulle pour ne pas perturber le circuit. Le voltmètre : en parallèle, haute impédance."
+  }
+];
+
+let currentScore = 0;
+let answeredCount = 0;
+const answered = new Array(questions.length).fill(false);
+
+function renderQuiz(){
+  const container = document.getElementById('quizContainer');
+  container.innerHTML = '';
+  questions.forEach((q, i) => {
+    const card = document.createElement('div');
+    card.className = 'question';
+    card.id = `q${i}`;
+    card.innerHTML = `
+      <div class="q-header">
+        <span class="q-num">Question ${i+1} / ${questions.length}</span>
+        <span class="q-theme ${q.themeClass}">${q.theme}</span>
+      </div>
+      <div class="q-text">${q.q}</div>
+      <div class="options">
+        ${q.options.map((opt, j) => `
+          <button class="option" data-q="${i}" data-opt="${j}">
+            <span class="key">${String.fromCharCode(65+j)}</span>
+            <span>${opt}</span>
+          </button>
+        `).join('')}
+      </div>
+      <div class="explanation" id="exp${i}">
+        <div class="label">Explication</div>
+        <div class="text">${q.explain}</div>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+
+  document.querySelectorAll('.option').forEach(btn => {
+    btn.addEventListener('click', handleAnswer);
+  });
+
+  // re-render KaTeX
+  if(window.renderMathInElement){
+    renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}], throwOnError: false});
+  }
+}
+
+function handleAnswer(e){
+  const btn = e.currentTarget;
+  const qIdx = parseInt(btn.dataset.q);
+  const optIdx = parseInt(btn.dataset.opt);
+  
+  if(answered[qIdx]) return;
+  answered[qIdx] = true;
+  answeredCount++;
+  
+  const q = questions[qIdx];
+  const allOpts = document.querySelectorAll(`.option[data-q="${qIdx}"]`);
+  
+  allOpts.forEach((opt, i) => {
+    opt.classList.add('disabled');
+    if(i === q.correct){
+      opt.classList.add('correct');
+    } else if(i === optIdx){
+      opt.classList.add('wrong');
+    }
+  });
+  
+  if(optIdx === q.correct){
+    currentScore++;
+    document.getElementById('liveScore').textContent = currentScore;
+  }
+  
+  document.getElementById(`exp${qIdx}`).classList.add('show');
+  
+  // update progress
+  const pct = (answeredCount / questions.length) * 100;
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressText').textContent = `${answeredCount} / ${questions.length} répondues`;
+  
+  // re-render math
+  if(window.renderMathInElement){
+    renderMathInElement(document.getElementById(`exp${qIdx}`), {delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}], throwOnError: false});
+  }
+  
+  // scroll to next or show result
+  if(answeredCount === questions.length){
+    showResult();
+  } else {
+    setTimeout(() => {
+      const nextUnanswered = answered.findIndex((a, i) => !a && i > qIdx);
+      const nextIdx = nextUnanswered !== -1 ? nextUnanswered : answered.findIndex(a => !a);
+      if(nextIdx !== -1){
+        document.getElementById(`q${nextIdx}`).scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    }, 1200);
+  }
+}
+
+function showResult(){
+  const result = document.getElementById('result');
+  const finalScore = document.getElementById('finalScore');
+  const title = document.getElementById('resultTitle');
+  const msg = document.getElementById('resultMessage');
+  
+  finalScore.textContent = currentScore + ' / 30';
+  
+  if(currentScore >= 27){
+    title.textContent = 'Excellent !';
+    msg.textContent = "Tu maîtrises le programme. Continue les annales d'examen pour t'entraîner aux conditions réelles.";
+  } else if(currentScore >= 22){
+    title.textContent = 'Très bien';
+    msg.textContent = "Solide, mais quelques points à consolider. Relis la fiche complète sur les questions ratées.";
+  } else if(currentScore >= 15){
+    title.textContent = 'Encore du travail';
+    msg.textContent = "Il faut revoir certaines notions. Reprends la fiche complète et refais le quiz dans quelques jours.";
+  } else {
+    title.textContent = 'Il faut s\'y mettre !';
+    msg.textContent = "Repars de la fiche complète, prends des notes, et reviens au quiz après une lecture approfondie.";
+  }
+  
+  result.classList.add('show');
+  setTimeout(() => result.scrollIntoView({behavior:'smooth', block:'center'}), 200);
+}
+
+function restartQuiz(){
+  currentScore = 0;
+  answeredCount = 0;
+  for(let i = 0; i < answered.length; i++) answered[i] = false;
+  document.getElementById('liveScore').textContent = '0';
+  document.getElementById('progressFill').style.width = '0%';
+  document.getElementById('progressText').textContent = '0 / 30 répondues';
+  document.getElementById('result').classList.remove('show');
+  renderQuiz();
+  window.scrollTo({top: 0, behavior:'smooth'});
+}
+
+document.addEventListener('DOMContentLoaded', renderQuiz);
+</script>
+
+</body>
+</html>
