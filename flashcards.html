@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+<html lang="fr" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -410,10 +410,12 @@ let allCards = [];
 let deck = [];          // cartes restantes à voir
 let queue = [];         // cartes à revoir (rajoutées à la fin)
 let currentCard = null;
+let currentIdx = 0;     // index courant dans deck
 let isFlipped = false;
 let stats = {known: 0, hard: 0, total: 0};
 let selectedCount = 20;
 let selectedTheme = "all";
+let history = [];       // historique pour navigation arrière
 
 // Load data
 fetch('quiz-data.json')
@@ -508,6 +510,9 @@ function showCard(card){
   
   // Hide action row until flipped
   document.getElementById('actionRow').style.display = 'none';
+  
+  // Update nav buttons state
+  document.getElementById('prevBtn').disabled = history.length === 0;
 }
 
 function flipCard(){
@@ -518,6 +523,9 @@ function flipCard(){
 }
 
 function nextCard(){
+  if(currentCard){
+    history.push(currentCard);  // Ajouter à l'historique
+  }
   if(deck.length > 0){
     showCard(deck.shift());
   } else if(queue.length > 0){
@@ -530,9 +538,11 @@ function nextCard(){
 }
 
 function prevCard(){
-  // Pour simplicité : pas de vraie navigation arrière (deck = file)
-  // On peut juste retourner la carte
-  flipCard();
+  if(history.length === 0) return;  // Rien à revenir
+  const prevCard = history.pop();   // Récupérer dernière de l'historique
+  deck.unshift(currentCard);        // Remettre la carte actuelle en avant du deck
+  showCard(prevCard);               // Afficher la précédente
+  isFlipped = false;                // Remettre face avant
 }
 
 function markCard(action){
