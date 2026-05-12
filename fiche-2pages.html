@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BTS CIEL · Fiche 2 pages</title>
+<title>BTS CIEL · Option B · Fiche 2 pages</title>
+<script src="theme.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter+Tight:wght@400;500;600;700&display=swap">
@@ -11,15 +12,13 @@
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
         onload="renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});"></script>
+<link rel="stylesheet" href="theme.css">
 <style>
-:root{
-  --ink:#1a1614;
-  --paper:#fbf9f3;
-  --accent:#c2410c;
-  --accent-2:#0f5e3f;
-  --accent-3:#1e3a8a;
-  --muted:#6b6258;
+.legacy-2p{
   --bg-page:#e8e5dc;
+}
+:root[data-theme="dark"]{
+  --bg-page:#0a0807;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 body{
@@ -208,7 +207,13 @@ th{
 
 <div class="toolbar">
   <a href="index.html">← Retour au sommaire</a>
-  <button class="print-btn" onclick="window.print()">🖨 Imprimer (2 pages)</button>
+  <span style="display:flex;align-items:center;gap:14px">
+    <button class="print-btn" onclick="window.print()">🖨 Imprimer (2 pages)</button>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Changer le thème">
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </span>
 </div>
 
 <!-- ================ PAGE 1 ================ -->
@@ -218,7 +223,7 @@ th{
     <h1>BTS&nbsp;CIEL · <em>physique</em></h1>
     <div class="meta">
       Fiche express 2 pages<br>
-      Options A &amp; B · Conforme RPF V2<br>
+      Option B (ER) · Conforme RPF V2<br>
       Page 1/2 — Cœur du programme
     </div>
   </div>
@@ -372,7 +377,7 @@ th{
     <h1>BTS&nbsp;CIEL · <em>physique</em></h1>
     <div class="meta">
       Fiche express 2 pages<br>
-      Options A &amp; B · Conforme RPF V2<br>
+      Option B (ER) · Conforme RPF V2<br>
       Page 2/2 — Filtres &amp; mesures
     </div>
   </div>

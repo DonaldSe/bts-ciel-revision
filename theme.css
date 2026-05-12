@@ -1,0 +1,107 @@
+/* ==========================================
+   BTS CIEL — Thème partagé (light + dark)
+   ========================================== */
+
+:root,
+:root[data-theme="light"]{
+  --bg:#f4f1ea;
+  --paper:#fbf9f3;
+  --ink:#1a1614;
+  --accent:#c2410c;
+  --accent-2:#0f5e3f;
+  --accent-3:#1e3a8a;
+  --accent-4:#7c3aed;
+  --accent-5:#0891b2;
+  --muted:#6b6258;
+  --grid:rgba(26,22,20,0.06);
+  --border:#1a1614;
+  --shadow:rgba(0,0,0,0.15);
+  --success:#0f5e3f;
+  --error:#b91c1c;
+  --warn:#fb923c;
+  
+  /* Theme-specific colors for tags */
+  --tag-t1-bg:#fce7f3;
+  --tag-t2-bg:#dbeafe;
+  --tag-t3-bg:#dcfce7;
+  --tag-t4-bg:#fef3c7;
+}
+
+:root[data-theme="dark"]{
+  --bg:#1a1614;
+  --paper:#262220;
+  --ink:#f4f1ea;
+  --accent:#fb923c;
+  --accent-2:#34d399;
+  --accent-3:#60a5fa;
+  --accent-4:#a78bfa;
+  --accent-5:#22d3ee;
+  --muted:#a39d8e;
+  --grid:rgba(244,241,234,0.04);
+  --border:#3f3a36;
+  --shadow:rgba(0,0,0,0.5);
+  --success:#34d399;
+  --error:#f87171;
+  --warn:#fb923c;
+  
+  /* Tags adaptés au sombre */
+  --tag-t1-bg:#831843;
+  --tag-t2-bg:#1e3a8a;
+  --tag-t3-bg:#14532d;
+  --tag-t4-bg:#78350f;
+}
+
+/* Body utilise les variables */
+body{
+  background:var(--bg);
+  color:var(--ink);
+  background-image:
+    linear-gradient(var(--grid) 1px,transparent 1px),
+    linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:24px 24px;
+  transition:background-color 0.25s ease, color 0.25s ease;
+}
+
+/* THEME TOGGLE BUTTON */
+.theme-toggle{
+  background:var(--paper);
+  border:1px solid var(--border);
+  color:var(--ink);
+  width:36px;height:36px;
+  display:inline-flex;align-items:center;justify-content:center;
+  cursor:pointer;
+  font-size:16px;
+  font-family:inherit;
+  transition:all 0.2s ease;
+  flex-shrink:0;
+}
+.theme-toggle:hover{
+  background:var(--accent);
+  border-color:var(--accent);
+  color:var(--paper);
+}
+.theme-toggle svg{
+  width:18px;height:18px;
+}
+:root[data-theme="dark"] .theme-toggle .sun{display:block}
+:root[data-theme="dark"] .theme-toggle .moon{display:none}
+:root[data-theme="light"] .theme-toggle .sun{display:none}
+:root[data-theme="light"] .theme-toggle .moon{display:block}
+/* default = light */
+.theme-toggle .sun{display:none}
+.theme-toggle .moon{display:block}
+
+/* Toolbar dark adjustments */
+:root[data-theme="dark"] .toolbar{
+  background:#0a0807;
+  border-bottom-color:var(--accent);
+}
+:root[data-theme="dark"] .toolbar .theme-toggle{
+  background:transparent;
+  border-color:var(--paper);
+  color:var(--paper);
+}
+:root[data-theme="dark"] .toolbar .theme-toggle:hover{
+  background:var(--accent);
+  border-color:var(--accent);
+}

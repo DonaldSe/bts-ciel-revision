@@ -1,0 +1,3902 @@
+[
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "Un capteur convertit :",
+  "options": [
+   "Une tension en lumière",
+   "Une grandeur physique en signal électrique",
+   "Un courant en force",
+   "Un fichier en image"
+  ],
+  "correct": 1,
+  "explain": "Le capteur transforme une grandeur physique (T, P, lumière…) en signal électrique exploitable."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "La sensibilité d'un capteur s'écrit :",
+  "options": [
+   "S = Δe/Δs",
+   "S = Δs/Δe",
+   "S = e × s",
+   "S = e/s"
+  ],
+  "correct": 1,
+  "explain": "S = Δs/Δe : variation de sortie par unité d'entrée. Unité : [sortie]/[entrée]."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "L'étendue de mesure (E.M.) d'un capteur vaut :",
+  "options": [
+   "e_max + e_min",
+   "e_max − e_min",
+   "e_max × e_min",
+   "(e_max + e_min)/2"
+  ],
+  "correct": 1,
+  "explain": "E.M. = e_max − e_min. C'est la plage utilisable du capteur."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "Un capteur T.O.R. délivre :",
+  "options": [
+   "Un signal analogique continu",
+   "Un mot binaire de plusieurs bits",
+   "Un signal à deux états (0 ou 1)",
+   "Un signal RF"
+  ],
+  "correct": 2,
+  "explain": "T.O.R. = Tout-Ou-Rien : 2 états (interrupteur, détecteur PIR, fin de course)."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "Un capteur analogique fournit :",
+  "options": [
+   "Une tension/courant variant continûment",
+   "Un mot numérique",
+   "Du PWM",
+   "Un signal RF"
+  ],
+  "correct": 0,
+  "explain": "Capteur analogique : sortie qui varie continûment avec la grandeur d'entrée."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "Un capteur numérique communique typiquement via :",
+  "options": [
+   "Antenne FM",
+   "Bus I²C / SPI / 1-Wire",
+   "Câble coaxial seul",
+   "Tension analogique"
+  ],
+  "correct": 1,
+  "explain": "Capteurs numériques : ils embarquent un CAN et communiquent par bus série."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "La résolution d'un capteur, c'est :",
+  "options": [
+   "Sa précision absolue",
+   "La plus petite variation détectable",
+   "Sa pleine échelle",
+   "Sa rapidité"
+  ],
+  "correct": 1,
+  "explain": "Résolution = plus petite variation de l'entrée détectable par le capteur."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "Le temps de réponse d'un capteur caractérise :",
+  "options": [
+   "Sa durée de vie",
+   "Le délai pour donner une mesure stable",
+   "Sa garantie",
+   "Sa rapidité de fabrication"
+  ],
+  "correct": 1,
+  "explain": "C'est le délai entre une variation d'entrée et la stabilisation de la sortie."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "Une thermistance CTN voit sa résistance :",
+  "options": [
+   "Augmenter avec T",
+   "Diminuer avec T",
+   "Constante",
+   "Nulle à 0°C"
+  ],
+  "correct": 1,
+  "explain": "CTN = Coefficient de Température Négatif. R baisse quand T monte."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "Un thermocouple génère :",
+  "options": [
+   "Un courant proportionnel à T",
+   "Une tension proportionnelle à ΔT entre 2 soudures",
+   "Une résistance fonction de T",
+   "Un PWM"
+  ],
+  "correct": 1,
+  "explain": "Effet Seebeck : tension proportionnelle à la différence de T entre 2 jonctions de métaux différents."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "Une jauge de contrainte se monte typiquement dans :",
+  "options": [
+   "Un pont en H",
+   "Un pont de Wheatstone",
+   "Un diviseur capacitif",
+   "Un transformateur"
+  ],
+  "correct": 1,
+  "explain": "Pont de Wheatstone : très adapté pour mesurer une petite variation de R (jauge, RTD…)."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "Une RTD Pt100 a une résistance nominale de :",
+  "options": [
+   "10 Ω à 0°C",
+   "100 Ω à 0°C",
+   "1 kΩ à 0°C",
+   "100 Ω à 100°C"
+  ],
+  "correct": 1,
+  "explain": "Pt100 : R = 100 Ω à 0°C. R augmente quasi-linéairement avec T."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "Une photodiode délivre :",
+  "options": [
+   "Une tension constante",
+   "Un courant proportionnel au flux lumineux",
+   "Une fréquence",
+   "Un PWM"
+  ],
+  "correct": 1,
+  "explain": "La photodiode en mode photovoltaïque ou photoconducteur produit un courant ∝ flux lumineux."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "Un accéléromètre MEMS mesure :",
+  "options": [
+   "Une vitesse linéaire",
+   "Une accélération",
+   "Une rotation",
+   "Une force directe"
+  ],
+  "correct": 1,
+  "explain": "Accéléromètre : mesure l'accélération en m/s² ou en g."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "Un gyroscope mesure :",
+  "options": [
+   "Une accélération linéaire",
+   "Une vitesse angulaire",
+   "Un champ magnétique",
+   "Une température"
+  ],
+  "correct": 1,
+  "explain": "Gyro : vitesse de rotation autour d'un axe (rad/s ou °/s)."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "Un magnétomètre mesure :",
+  "options": [
+   "La pression",
+   "Le champ magnétique",
+   "La force",
+   "Le courant"
+  ],
+  "correct": 1,
+  "explain": "Magnétomètre : amplitude et direction du champ magnétique (boussole numérique)."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "Le bruit d'un capteur, c'est :",
+  "options": [
+   "Le son qu'il fait",
+   "Des fluctuations aléatoires de la sortie",
+   "Sa température",
+   "Sa consommation"
+  ],
+  "correct": 1,
+  "explain": "Bruit = variations parasites superposées au signal utile. Limite la résolution effective."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "La calibration (étalonnage) sert à :",
+  "options": [
+   "Allumer le capteur",
+   "Comparer à une référence et corriger l'écart",
+   "Le programmer",
+   "Le nettoyer"
+  ],
+  "correct": 1,
+  "explain": "Calibrer = ajuster le capteur en comparant à un étalon (correction de zéro, gain)."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "Sur une datasheet, on cherche notamment :",
+  "options": [
+   "Le nom du fabricant",
+   "Sensibilité, plage, linéarité, alim",
+   "La couleur",
+   "Le code barre"
+  ],
+  "correct": 1,
+  "explain": "Infos clés : sensibilité, résolution, étendue, linéarité, alimentation, type de sortie."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "Un capteur ratiométrique fournit :",
+  "options": [
+   "Une valeur en SI",
+   "Une sortie ∝ à sa tension d'alim",
+   "Un courant constant",
+   "Une fréquence"
+  ],
+  "correct": 1,
+  "explain": "Capteur ratiométrique : la sortie est proportionnelle à V_alim → utile car le CAN l'est aussi."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "La justesse caractérise :",
+  "options": [
+   "La répétabilité",
+   "La proximité à la valeur vraie",
+   "La rapidité",
+   "Le coût"
+  ],
+  "correct": 1,
+  "explain": "Justesse = écart faible entre la moyenne des mesures et la vraie valeur."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "La fidélité caractérise :",
+  "options": [
+   "La proximité de la vraie valeur",
+   "La faible dispersion entre mesures répétées",
+   "Le prix",
+   "La rapidité"
+  ],
+  "correct": 1,
+  "explain": "Fidélité = mesures répétées proches entre elles (faible dispersion = bonne fidélité)."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "La linéarité d'un capteur indique :",
+  "options": [
+   "Sa robustesse",
+   "À quel point sa caractéristique est une droite",
+   "Sa rapidité",
+   "Sa température max"
+  ],
+  "correct": 1,
+  "explain": "Linéaire = entrée/sortie proches d'une droite, facile à exploiter."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "La grandeur d'entrée d'un capteur de pression est :",
+  "options": [
+   "Un courant",
+   "Une pression (Pa, bar…)",
+   "Une fréquence",
+   "Une tension"
+  ],
+  "correct": 1,
+  "explain": "Entrée = grandeur physique mesurée (ici pression). Sortie = signal électrique."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "Un capteur intelligent embarque :",
+  "options": [
+   "Une antenne",
+   "Du traitement local (ML / fusion)",
+   "Un GPS",
+   "Une batterie"
+  ],
+  "correct": 1,
+  "explain": "Capteur intelligent : embarque traitement → entraînement, test, déploiement."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "Les 3 phases d'un capteur intelligent sont :",
+  "options": [
+   "Test, déploiement, entraînement",
+   "Entraînement, test, déploiement",
+   "Allumage, mesure, arrêt",
+   "Filtrage, gain, offset"
+  ],
+  "correct": 1,
+  "explain": "Workflow ML : entraînement (apprentissage), test (validation), déploiement (mise en service)."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "Un capteur de proximité inductif détecte :",
+  "options": [
+   "Toute matière",
+   "Uniquement les métaux",
+   "Les liquides",
+   "Le son"
+  ],
+  "correct": 1,
+  "explain": "Inductif : variation d'un champ magnétique → métaux uniquement."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "Un capteur capacitif détecte :",
+  "options": [
+   "Uniquement les métaux",
+   "Tout matériau modifiant la capacité (métal, eau, plastique)",
+   "Que les liquides",
+   "Que les humains"
+  ],
+  "correct": 1,
+  "explain": "Capacitif : sensible à tout objet qui modifie la capacité d'un condensateur."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "Un encodeur incrémental fournit :",
+  "options": [
+   "Une position absolue",
+   "Des impulsions liées au déplacement",
+   "Une tension continue",
+   "Une fréquence porteuse"
+  ],
+  "correct": 1,
+  "explain": "Encodeur incrémental : impulsions sur 2 voies (A, B) en quadrature → comptage relatif."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "La grandeur de sortie d'un capteur est typiquement :",
+  "options": [
+   "Une masse",
+   "Tension, courant ou mot binaire",
+   "Une couleur",
+   "Une longueur"
+  ],
+  "correct": 1,
+  "explain": "Sortie d'un capteur = signal électrique exploitable."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "Une PT100 fait partie des capteurs :",
+  "options": [
+   "Numériques",
+   "Résistifs (RTD)",
+   "Capacitifs",
+   "Optiques"
+  ],
+  "correct": 1,
+  "explain": "Pt100 = capteur résistif (RTD = Resistance Temperature Detector)."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "Un capteur à effet Hall mesure :",
+  "options": [
+   "La température",
+   "Le champ magnétique ou le courant",
+   "La pression",
+   "L'humidité"
+  ],
+  "correct": 1,
+  "explain": "Effet Hall : tension de Hall ∝ champ magnétique. Utilisé pour pinces ampèremétriques."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "Le préfixe SI 'kilo' vaut :",
+  "options": [
+   "10⁻³",
+   "10²",
+   "10³",
+   "10⁶"
+  ],
+  "correct": 2,
+  "explain": "kilo = 10³ = 1000. Ex : 1 kΩ = 1000 Ω."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "Le préfixe SI 'milli' vaut :",
+  "options": [
+   "10⁻³",
+   "10⁻⁶",
+   "10⁻⁹",
+   "10³"
+  ],
+  "correct": 0,
+  "explain": "milli = 10⁻³ = 0,001."
+ },
+ {
+  "theme": "T1 · Acquérir",
+  "themeClass": "t1",
+  "q": "Le préfixe 'µ' (micro) vaut :",
+  "options": [
+   "10⁻³",
+   "10⁻⁶",
+   "10⁻⁹",
+   "10⁻¹²"
+  ],
+  "correct": 1,
+  "explain": "µ = 10⁻⁶."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Un CAN convertit :",
+  "options": [
+   "Numérique → analogique",
+   "Analogique → numérique",
+   "DC → AC",
+   "Tension → courant"
+  ],
+  "correct": 1,
+  "explain": "CAN = Convertisseur Analogique Numérique. Échantillonne et quantifie."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "La condition de Shannon s'écrit :",
+  "options": [
+   "fe = fmax",
+   "fe > 2·fmax",
+   "fe < fmax/2",
+   "fe = fmax/2"
+  ],
+  "correct": 1,
+  "explain": "Shannon-Nyquist : fe > 2·fmax pour reconstruire sans repliement spectral."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Le repliement spectral (aliasing) survient si :",
+  "options": [
+   "fe est trop élevée",
+   "fe < 2·fmax",
+   "Le CAN a trop de bits",
+   "L'amplitude est faible"
+  ],
+  "correct": 1,
+  "explain": "Si fe est insuffisante, les composantes > fe/2 se replient dans la bande utile : informations corrompues."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Le filtre anti-repliement est :",
+  "options": [
+   "Numérique après CAN",
+   "Analogique passe-bas avant CAN",
+   "Un AOP",
+   "Un amplificateur"
+  ],
+  "correct": 1,
+  "explain": "Placé AVANT l'échantillonnage, c'est un passe-bas analogique avec fc ≤ fe/2."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Le quantum d'un CAN N bits, pleine échelle V_PE :",
+  "options": [
+   "V_PE × N",
+   "V_PE × 2^N",
+   "V_PE / 2^N",
+   "V_PE / N"
+  ],
+  "correct": 2,
+  "explain": "q = V_PE/2^N. C'est le pas de quantification (1 LSB)."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Un CAN 8 bits a :",
+  "options": [
+   "8 niveaux",
+   "256 niveaux",
+   "512 niveaux",
+   "1024 niveaux"
+  ],
+  "correct": 1,
+  "explain": "2^8 = 256 niveaux."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Un CAN 12 bits a :",
+  "options": [
+   "1024 niveaux",
+   "2048 niveaux",
+   "4096 niveaux",
+   "8192 niveaux"
+  ],
+  "correct": 2,
+  "explain": "2^12 = 4096 niveaux."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Un CAN 16 bits a :",
+  "options": [
+   "16 000",
+   "32 768",
+   "65 536",
+   "1 048 576"
+  ],
+  "correct": 2,
+  "explain": "2^16 = 65 536 niveaux."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Pour V_PE = 5 V et N = 10 bits, q vaut :",
+  "options": [
+   "0,5 mV",
+   "≈ 4,88 mV",
+   "10 mV",
+   "50 mV"
+  ],
+  "correct": 1,
+  "explain": "q = 5/1024 ≈ 4,88 mV."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Pour V_PE = 3,3 V et N = 12 bits, q vaut :",
+  "options": [
+   "0,33 mV",
+   "≈ 0,805 mV",
+   "3,3 mV",
+   "8 mV"
+  ],
+  "correct": 1,
+  "explain": "q = 3,3/4096 ≈ 0,805 mV."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Augmenter N (bits) sur un CAN :",
+  "options": [
+   "Augmente q",
+   "Diminue q (meilleure résolution)",
+   "N'a aucun effet",
+   "Diminue fe"
+  ],
+  "correct": 1,
+  "explain": "Plus N est grand, plus q est petit → meilleure résolution."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Le quantum global d'une chaîne (CAN + ampli + capteur) vaut :",
+  "options": [
+   "q × S × A",
+   "q / (S × A)",
+   "q + S + A",
+   "q × A"
+  ],
+  "correct": 1,
+  "explain": "q_chaîne = q_CAN / (S_capteur × A_ampli). On le ramène à la grandeur physique."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Un signal audio jusqu'à 20 kHz nécessite fe minimum de :",
+  "options": [
+   "10 kHz",
+   "20 kHz",
+   "40 kHz",
+   "100 kHz"
+  ],
+  "correct": 2,
+  "explain": "Shannon : fe > 40 kHz. Le CD audio : 44,1 kHz pour la marge."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "L'ordre d'une chaîne de mesure typique est :",
+  "options": [
+   "CAN → ampli → capteur",
+   "Capteur → conditionneur → ampli → filtre → CAN",
+   "CAN → capteur → filtre",
+   "Filtre → CAN → ampli"
+  ],
+  "correct": 1,
+  "explain": "Capteur → conditionneur (pont, 4-20) → ampli (gain, offset) → filtre anti-repliement → CAN."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "L'opération d'échantillonnage :",
+  "options": [
+   "Discrétise en niveau",
+   "Prélève à intervalles Te = 1/fe",
+   "Amplifie le signal",
+   "Filtre"
+  ],
+  "correct": 1,
+  "explain": "Échantillonnage = prise d'échantillons espacés régulièrement de Te dans le temps."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "L'opération de quantification :",
+  "options": [
+   "Échantillonne",
+   "Approxime la tension par un niveau parmi 2^N",
+   "Filtre",
+   "Amplifie"
+  ],
+  "correct": 1,
+  "explain": "Quantification = on approxime la tension par le niveau discret le plus proche."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Le gain en tension A et le gain en dB sont reliés par :",
+  "options": [
+   "G = A",
+   "G = 10·log A",
+   "G = 20·log A",
+   "G = A²"
+  ],
+  "correct": 2,
+  "explain": "Pour tension/amplitude : G(dB) = 20·log₁₀(A). Pour puissance : facteur 10."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Le gain en puissance s'écrit :",
+  "options": [
+   "G = 20·log(P_s/P_e)",
+   "G = 10·log(P_s/P_e)",
+   "G = P_s/P_e",
+   "G = √(P_s/P_e)"
+  ],
+  "correct": 1,
+  "explain": "Pour les puissances : G(dB) = 10·log(P_s/P_e)."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Si A = 10, alors G vaut :",
+  "options": [
+   "10 dB",
+   "20 dB",
+   "30 dB",
+   "100 dB"
+  ],
+  "correct": 1,
+  "explain": "G = 20·log(10) = 20 dB."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Si A = 100, alors G vaut :",
+  "options": [
+   "20 dB",
+   "40 dB",
+   "60 dB",
+   "100 dB"
+  ],
+  "correct": 1,
+  "explain": "G = 20·log(100) = 40 dB."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Si A = 1000, alors G vaut :",
+  "options": [
+   "20 dB",
+   "40 dB",
+   "60 dB",
+   "100 dB"
+  ],
+  "correct": 2,
+  "explain": "G = 20·log(1000) = 60 dB."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Si G = 6 dB, A vaut approximativement :",
+  "options": [
+   "1,4",
+   "2",
+   "3",
+   "10"
+  ],
+  "correct": 1,
+  "explain": "+6 dB ≈ ×2."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Si G = 3 dB, A vaut approximativement :",
+  "options": [
+   "√2 ≈ 1,41",
+   "2",
+   "3",
+   "10"
+  ],
+  "correct": 0,
+  "explain": "+3 dB ≈ ×√2."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Si G = −20 dB, A vaut :",
+  "options": [
+   "0,01",
+   "0,1",
+   "1",
+   "10"
+  ],
+  "correct": 1,
+  "explain": "A = 10^(−20/20) = 0,1."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "La saturation d'un AOP :",
+  "options": [
+   "Augmente le gain",
+   "Écrête la sortie aux tensions d'alim",
+   "Annule la sortie",
+   "Filtre"
+  ],
+  "correct": 1,
+  "explain": "Quand la sortie tente de dépasser V_alim, elle est écrêtée → distorsion."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Un AOP idéal en régime linéaire a :",
+  "options": [
+   "V+ ≠ V−",
+   "V+ = V−",
+   "I+ ≠ I−",
+   "Gain nul"
+  ],
+  "correct": 1,
+  "explain": "AOP idéal en boucle fermée : V+ = V− (masse virtuelle si V+ à la masse)."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Le courant d'entrée d'un AOP idéal est :",
+  "options": [
+   "Très élevé",
+   "Nul",
+   "Égal à V_cc",
+   "Variable"
+  ],
+  "correct": 1,
+  "explain": "Impédance d'entrée infinie → courant d'entrée nul (idéal)."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Un montage inverseur avec R1, R2 (R2 contre-réaction) a un gain :",
+  "options": [
+   "+R2/R1",
+   "−R2/R1",
+   "1 + R2/R1",
+   "R1·R2"
+  ],
+  "correct": 1,
+  "explain": "Montage inverseur : V_s = −(R2/R1)·V_e."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Un montage suiveur (buffer) :",
+  "options": [
+   "Amplifie ×10",
+   "A un gain unitaire",
+   "Atténue",
+   "Inverse"
+  ],
+  "correct": 1,
+  "explain": "Suiveur : V_s = V_e. Sert à adapter les impédances (haute Z_e, faible Z_s)."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Un montage non-inverseur a un gain :",
+  "options": [
+   "−R2/R1",
+   "1 + R2/R1",
+   "R2/R1",
+   "R1/R2"
+  ],
+  "correct": 1,
+  "explain": "Non-inverseur : V_s = (1 + R2/R1)·V_e."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Le slew-rate d'un AOP, c'est :",
+  "options": [
+   "Sa fréquence max",
+   "La vitesse max de variation de la sortie (V/µs)",
+   "Sa consommation",
+   "Son offset"
+  ],
+  "correct": 1,
+  "explain": "Slew-rate = dV/dt max en sortie. Limite la fréquence pour les grandes amplitudes."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Le GBW (Gain × Bande passante) d'un AOP est :",
+  "options": [
+   "Constant",
+   "Variable",
+   "Nul",
+   "Infini"
+  ],
+  "correct": 0,
+  "explain": "Le produit G × BP est constant (= GBW). À gain élevé → BP réduite."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Une boucle de courant 4-20 mA, 4 mA correspond à :",
+  "options": [
+   "100 %",
+   "50 %",
+   "0 % (min)",
+   "Panne"
+  ],
+  "correct": 2,
+  "explain": "4 mA = 0 % (min), 20 mA = 100 % (max). 0 mA = panne/coupure."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "L'avantage du 4-20 mA est :",
+  "options": [
+   "Sa rapidité",
+   "Immunité au bruit + détection de coupure",
+   "Son prix",
+   "Sa fréquence"
+  ],
+  "correct": 1,
+  "explain": "Courant = peu sensible au bruit ; absence de 4-20 = défaut."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Le sample-and-hold sert à :",
+  "options": [
+   "Filtrer",
+   "Maintenir la tension pendant la conversion CAN",
+   "Amplifier",
+   "Trier"
+  ],
+  "correct": 1,
+  "explain": "S&H fige la tension pour que le CAN ait le temps de convertir."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Un offset d'amplificateur, c'est :",
+  "options": [
+   "Un gain",
+   "Un décalage continu de la sortie",
+   "Du bruit",
+   "Un filtrage"
+  ],
+  "correct": 1,
+  "explain": "Offset = tension continue ajoutée. Utile pour centrer le signal dans la plage du CAN."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Pour adapter un signal à la pleine échelle du CAN, on règle :",
+  "options": [
+   "Uniquement la fréquence",
+   "Gain et offset de l'amplificateur",
+   "Le quantum",
+   "L'alim"
+  ],
+  "correct": 1,
+  "explain": "Le gain ajuste l'amplitude, l'offset centre le signal dans la plage [0 ; V_PE]."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Un signal de ±5 V à numériser avec un CAN unipolaire 0-5 V nécessite :",
+  "options": [
+   "Un gain de 2",
+   "Un offset de +5 V + diviseur par 2",
+   "Rien",
+   "Un filtre seul"
+  ],
+  "correct": 1,
+  "explain": "On décale (offset +5V) puis on divise par 2 pour passer du ±5V au 0-5V."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Un CAN à approximations successives (SAR) est :",
+  "options": [
+   "Très lent",
+   "Rapide et précis",
+   "Très bruyant",
+   "Sans horloge"
+  ],
+  "correct": 1,
+  "explain": "SAR : compromis rapide/précis, le plus courant en µC. Convergence binaire."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Un CAN flash est :",
+  "options": [
+   "Le plus lent",
+   "Le plus rapide (mais coûteux)",
+   "Inutilisable",
+   "Sans horloge"
+  ],
+  "correct": 1,
+  "explain": "Flash : tous les niveaux comparés simultanément → très rapide mais 2^N comparateurs."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Un CAN sigma-delta (ΣΔ) est utilisé pour :",
+  "options": [
+   "La très haute vitesse",
+   "La haute résolution (audio, capteur)",
+   "L'imagerie ultra-rapide",
+   "Le radar"
+  ],
+  "correct": 1,
+  "explain": "ΣΔ : surcadence + filtrage numérique → 16-24 bits, mais plus lent. Audio, instrumentation."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Un CNA (DAC) convertit :",
+  "options": [
+   "Analogique → numérique",
+   "Numérique → analogique",
+   "AC → DC",
+   "Tension → courant"
+  ],
+  "correct": 1,
+  "explain": "CNA = Convertisseur Numérique Analogique. Reconstruit un signal à partir d'un mot binaire."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "L'oscilloscope numérique utilise typiquement :",
+  "options": [
+   "Un CAN très rapide",
+   "Un CNA",
+   "Un transformateur",
+   "Un AOP de puissance"
+  ],
+  "correct": 0,
+  "explain": "L'oscilloscope numérise le signal à très haute fe (centaines de MHz à plusieurs GHz)."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Le rapport signal/bruit (SNR) théorique d'un CAN N bits ≈ :",
+  "options": [
+   "6N dB",
+   "6,02·N + 1,76 dB",
+   "10·N dB",
+   "N²"
+  ],
+  "correct": 1,
+  "explain": "SNR ≈ 6,02·N + 1,76 (dB). Pour 12 bits ≈ 74 dB."
+ },
+ {
+  "theme": "T2 · Traiter",
+  "themeClass": "t2",
+  "q": "Sur-échantillonner (fe >> 2·fmax) permet :",
+  "options": [
+   "Augmenter le bruit",
+   "Améliorer la résolution effective et étaler le bruit",
+   "Diminuer la fréquence",
+   "Rien"
+  ],
+  "correct": 1,
+  "explain": "Sur-échantillonnage + filtrage numérique → SNR amélioré. Principe du ΣΔ."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "La célérité de la lumière dans le vide vaut :",
+  "options": [
+   "3·10⁶ m/s",
+   "3·10⁸ m/s",
+   "3·10¹⁰ m/s",
+   "1·10⁸ m/s"
+  ],
+  "correct": 1,
+  "explain": "c = 3·10⁸ m/s ≈ 300 000 km/s. À connaître par cœur."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Relation longueur d'onde, célérité, fréquence :",
+  "options": [
+   "λ = c × f",
+   "λ = c / f",
+   "λ = f / c",
+   "λ = c + f"
+  ],
+  "correct": 1,
+  "explain": "λ = c/f. Plus f est grand, plus λ est petit."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Une onde à 100 MHz a λ valant :",
+  "options": [
+   "3 cm",
+   "30 cm",
+   "3 m",
+   "30 m"
+  ],
+  "correct": 2,
+  "explain": "λ = 3·10⁸ / 10⁸ = 3 m. Bande FM."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Wi-Fi 2,4 GHz a λ ≈ :",
+  "options": [
+   "1,25 mm",
+   "12,5 cm",
+   "1,25 m",
+   "12,5 m"
+  ],
+  "correct": 1,
+  "explain": "λ = 3·10⁸ / 2,4·10⁹ ≈ 0,125 m."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Wi-Fi 5 GHz a λ ≈ :",
+  "options": [
+   "6 mm",
+   "6 cm",
+   "60 cm",
+   "6 m"
+  ],
+  "correct": 1,
+  "explain": "λ = 3·10⁸ / 5·10⁹ = 0,06 m = 6 cm."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Une OEM se propage :",
+  "options": [
+   "Uniquement dans l'air",
+   "Dans le vide aussi",
+   "Que dans le cuivre",
+   "Que dans les liquides"
+  ],
+  "correct": 1,
+  "explain": "Onde électromagnétique : se propage dans le vide à c. Lumière, radio, etc."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Une onde mécanique :",
+  "options": [
+   "Se propage dans le vide",
+   "Nécessite un milieu matériel",
+   "C'est de la lumière",
+   "C'est radio"
+  ],
+  "correct": 1,
+  "explain": "Son, ultrasons, vagues → ondes mécaniques. Pas de son dans le vide."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Le son dans l'air va à environ :",
+  "options": [
+   "340 km/s",
+   "340 m/s",
+   "300 000 km/s",
+   "1 km/h"
+  ],
+  "correct": 1,
+  "explain": "v_son ≈ 340 m/s dans l'air à 20°C."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "La polarisation d'une OEM :",
+  "options": [
+   "Sa fréquence",
+   "Direction du champ E",
+   "Son amplitude",
+   "Sa vitesse"
+  ],
+  "correct": 1,
+  "explain": "Polarisation = orientation du champ électrique (verticale, horizontale, circulaire)."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "L'impédance caractéristique d'un coax RF typique :",
+  "options": [
+   "10 Ω",
+   "50 Ω",
+   "1 kΩ",
+   "10 kΩ"
+  ],
+  "correct": 1,
+  "explain": "50 Ω en RF, 75 Ω en vidéo. À connaître."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Une ligne est adaptée si :",
+  "options": [
+   "Z_L = 50 Ω forcément",
+   "Z_L = Z_c (charge = impédance caractéristique)",
+   "Court-circuit",
+   "Circuit ouvert"
+  ],
+  "correct": 1,
+  "explain": "Ligne adaptée : Z_L = Z_c → pas de réflexion. Indépendant de la valeur de Z_c."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "En court-circuit en bout de ligne :",
+  "options": [
+   "Pas d'écho",
+   "Écho inversé",
+   "Écho en phase",
+   "Écho doublé"
+  ],
+  "correct": 1,
+  "explain": "Court-circuit : réflexion totale avec inversion (coefficient Γ = −1)."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "En circuit ouvert en bout de ligne :",
+  "options": [
+   "Pas d'écho",
+   "Écho inversé",
+   "Écho en phase",
+   "Atténué de moitié"
+  ],
+  "correct": 2,
+  "explain": "Circuit ouvert : réflexion totale en phase (Γ = +1)."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Le coefficient de réflexion Γ vaut :",
+  "options": [
+   "(Z_L − Z_c)/(Z_L + Z_c)",
+   "Z_L × Z_c",
+   "Z_L − Z_c",
+   "Z_L / Z_c"
+  ],
+  "correct": 0,
+  "explain": "Γ = (Z_L − Z_c)/(Z_L + Z_c). Γ = 0 si adapté."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Le ROS (TOS) d'une ligne adaptée vaut :",
+  "options": [
+   "0",
+   "1",
+   "∞",
+   "−1"
+  ],
+  "correct": 1,
+  "explain": "ROS = 1 si Γ = 0 (adapté). ROS = ∞ si court-circuit ou circuit ouvert."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "La réflectométrie (TDR) sert à :",
+  "options": [
+   "Mesurer une R",
+   "Localiser un défaut sur une ligne par temps de vol",
+   "Émettre une onde",
+   "Filtrer"
+  ],
+  "correct": 1,
+  "explain": "TDR : impulsion + mesure de l'instant de l'écho → localisation du défaut."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Pour un écho à 2τ = 100 ns dans une ligne où v = 2·10⁸ m/s, la longueur :",
+  "options": [
+   "5 m",
+   "10 m",
+   "20 m",
+   "100 m"
+  ],
+  "correct": 1,
+  "explain": "L = v·Δt/2 = 2·10⁸ × 100·10⁻⁹ / 2 = 10 m."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "La vitesse de propagation dans un câble vaut typiquement :",
+  "options": [
+   "c (vitesse de la lumière dans le vide)",
+   "0,6 à 0,9·c",
+   "0,1·c",
+   "c × 2"
+  ],
+  "correct": 1,
+  "explain": "Dans un câble, v ≈ c/√εr ≈ 60 à 90 % de c."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "RS-232 est :",
+  "options": [
+   "Différentiel multi-points",
+   "Non-différentiel, ±12 V, point-à-point",
+   "Optique",
+   "RF"
+  ],
+  "correct": 1,
+  "explain": "RS-232 : asynchrone, non-différentiel, ±12 V, courte distance."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "RS-485 est :",
+  "options": [
+   "Optique",
+   "Différentiel, multipoint, longue distance",
+   "Idem RS-232",
+   "Sans masse"
+  ],
+  "correct": 1,
+  "explain": "RS-485 : différentiel (paire torsadée) → immunité au bruit + multipoint."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "I²C utilise :",
+  "options": [
+   "1 fil",
+   "2 fils (SDA + SCL)",
+   "4 fils",
+   "8 fils"
+  ],
+  "correct": 1,
+  "explain": "I²C : 2 fils + masse. SDA = data, SCL = clock."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "SPI utilise typiquement :",
+  "options": [
+   "1 fil",
+   "2 fils",
+   "4 fils + CS",
+   "8 fils"
+  ],
+  "correct": 2,
+  "explain": "SPI : MOSI, MISO, SCK, CS. Full-duplex, rapide."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Le bus CAN est différentiel et utilisé :",
+  "options": [
+   "Dans l'audio",
+   "En automobile et industrie",
+   "En téléphonie",
+   "Pour TV"
+  ],
+  "correct": 1,
+  "explain": "CAN : bus différentiel avec gestion de priorité par arbitrage."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Ethernet RJ45 utilise :",
+  "options": [
+   "Une fibre",
+   "Des paires torsadées différentielles",
+   "Coax 50 Ω uniquement",
+   "Bus 1 fil"
+  ],
+  "correct": 1,
+  "explain": "Ethernet : paires torsadées (1, 2 ou 4 paires selon le débit) avec couplage différentiel."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "La fibre optique guide la lumière par :",
+  "options": [
+   "Diffraction",
+   "Réflexion totale interne",
+   "Polarisation",
+   "Absorption"
+  ],
+  "correct": 1,
+  "explain": "Réflexion totale interne au-delà de l'angle critique (n_cœur > n_gaine)."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Une fibre monomode (SMF) est utilisée pour :",
+  "options": [
+   "Quelques mètres",
+   "Longues distances, haut débit",
+   "L'éclairage",
+   "Pas en télécom"
+  ],
+  "correct": 1,
+  "explain": "SMF : longue distance (jusqu'à des centaines de km), atténuation très faible."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Une fibre multimode (MMF) est utilisée pour :",
+  "options": [
+   "Transatlantique",
+   "Datacenter / LAN (courtes distances)",
+   "Pas en télécom",
+   "RF"
+  ],
+  "correct": 1,
+  "explain": "MMF (OM1 → OM5) : 50 à 550 m, moins coûteuse. Datacenter, immeuble."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Longueurs d'onde fenêtres optiques classiques :",
+  "options": [
+   "400 et 600 nm",
+   "850, 1310 et 1550 nm",
+   "100 et 200 nm",
+   "1 mm"
+  ],
+  "correct": 1,
+  "explain": "Fenêtres optiques : 850 nm (multimode), 1310 nm et 1550 nm (monomode, atténuation min)."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "L'atténuation d'une fibre se mesure en :",
+  "options": [
+   "dB",
+   "dB/km",
+   "Hz",
+   "Ω"
+  ],
+  "correct": 1,
+  "explain": "Atténuation en dB/km. SMF à 1550 nm : ≈ 0,2 dB/km (excellent)."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "L'ouverture numérique d'une fibre indique :",
+  "options": [
+   "Sa longueur",
+   "L'angle max d'acceptance",
+   "Son débit",
+   "Son prix"
+  ],
+  "correct": 1,
+  "explain": "NA = sin(angle_acceptance). Détermine le cône de lumière accepté par la fibre."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Une antenne demi-onde a une longueur :",
+  "options": [
+   "λ",
+   "λ/2",
+   "λ/4",
+   "2λ"
+  ],
+  "correct": 1,
+  "explain": "Dipôle demi-onde : ℓ = λ/2 → résonance, gain ≈ 2,15 dBi."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Pour 100 MHz, une antenne demi-onde mesure :",
+  "options": [
+   "15 cm",
+   "1,5 m",
+   "15 m",
+   "150 m"
+  ],
+  "correct": 1,
+  "explain": "λ = 3 m → ℓ = 1,5 m."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Pour 2,4 GHz, une antenne quart d'onde mesure :",
+  "options": [
+   "3 cm",
+   "≈ 3,1 cm (λ/4)",
+   "12,5 cm",
+   "1,25 m"
+  ],
+  "correct": 1,
+  "explain": "λ ≈ 12,5 cm → λ/4 ≈ 3,1 cm. Antennes Wi-Fi typiques."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Le gain d'une antenne en dBi est référé à :",
+  "options": [
+   "Un dipôle demi-onde",
+   "L'antenne isotrope théorique",
+   "Une parabole",
+   "Un câble"
+  ],
+  "correct": 1,
+  "explain": "dBi : référence isotrope (rayonnement uniforme dans toutes directions)."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Le gain en dBd est référé à :",
+  "options": [
+   "Isotrope",
+   "Dipôle demi-onde",
+   "Parabole",
+   "Yagi"
+  ],
+  "correct": 1,
+  "explain": "dBd : référence dipôle. On a G(dBi) = G(dBd) + 2,15."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "La P.I.R.E. vaut :",
+  "options": [
+   "P_e + G_e (en dB)",
+   "P_e − G_e",
+   "P_e / G_e",
+   "G_e seul"
+  ],
+  "correct": 0,
+  "explain": "P.I.R.E. = P_e + G_e en dB (= P_e × G_e en linéaire)."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Le Wi-Fi en France est limité à :",
+  "options": [
+   "1 mW (0 dBm)",
+   "100 mW (20 dBm) en P.I.R.E.",
+   "1 W (30 dBm)",
+   "10 W"
+  ],
+  "correct": 1,
+  "explain": "Wi-Fi 2,4 GHz en France : 100 mW = 20 dBm de PIRE max."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "1 W vaut en dBm :",
+  "options": [
+   "0",
+   "10",
+   "20",
+   "30"
+  ],
+  "correct": 3,
+  "explain": "1 W = 1000 mW → 10·log(1000) = 30 dBm."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "1 mW vaut en dBm :",
+  "options": [
+   "0",
+   "1",
+   "10",
+   "−10"
+  ],
+  "correct": 0,
+  "explain": "Référence : 0 dBm = 1 mW."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "La formule de Friis (puissance reçue) :",
+  "options": [
+   "P_r = P_e × G_e",
+   "P_r = P_e·G_e·G_r·(λ/4πd)²",
+   "P_r = P_e / d",
+   "P_r = P_e × d"
+  ],
+  "correct": 1,
+  "explain": "Friis : P_r = P_e·G_e·G_r·(λ/(4π·d))². Fournie en examen."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Doubler la distance d divise P_r par :",
+  "options": [
+   "2",
+   "4",
+   "8",
+   "10"
+  ],
+  "correct": 1,
+  "explain": "Friis : P_r ∝ 1/d² → ×2 sur d ⇒ ÷4 sur P_r."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "L'atténuation en espace libre L_FS (dB) :",
+  "options": [
+   "20·log(4π·d/λ)",
+   "10·log(d)",
+   "d/λ",
+   "λ/d"
+  ],
+  "correct": 0,
+  "explain": "L_FS = 20·log(4π·d/λ). Augmente avec d et avec f (λ diminue)."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Le débit binaire D et le débit de symboles R (bauds) :",
+  "options": [
+   "D = R",
+   "D = R·log₂(M)",
+   "D = R/M",
+   "D = R²"
+  ],
+  "correct": 1,
+  "explain": "D = R·log₂(M). Pour M = 2 (binaire), D = R."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Pour QPSK (M = 4), chaque symbole transporte :",
+  "options": [
+   "1 bit",
+   "2 bits",
+   "4 bits",
+   "8 bits"
+  ],
+  "correct": 1,
+  "explain": "log₂(4) = 2 bits/symbole. QPSK = 4 phases distinctes."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Pour 16-QAM, chaque symbole transporte :",
+  "options": [
+   "2",
+   "4",
+   "8",
+   "16"
+  ],
+  "correct": 1,
+  "explain": "log₂(16) = 4 bits/symbole."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Pour 64-QAM, chaque symbole transporte :",
+  "options": [
+   "4",
+   "6",
+   "8",
+   "64"
+  ],
+  "correct": 1,
+  "explain": "log₂(64) = 6 bits/symbole."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Pour 1024-QAM (Wi-Fi 6), chaque symbole :",
+  "options": [
+   "8",
+   "10",
+   "12",
+   "1024"
+  ],
+  "correct": 1,
+  "explain": "log₂(1024) = 10 bits/symbole."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "ASK signifie :",
+  "options": [
+   "Amplitude Shift Keying",
+   "Audio Sound Kit",
+   "Auto Speed",
+   "Async SK"
+  ],
+  "correct": 0,
+  "explain": "ASK = Amplitude Shift Keying. Modulation en amplitude."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "PSK signifie :",
+  "options": [
+   "Phase Shift Keying",
+   "Pulse SK",
+   "Power SK",
+   "Phase Sound"
+  ],
+  "correct": 0,
+  "explain": "PSK = Phase Shift Keying. Modulation en phase."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "QAM signifie :",
+  "options": [
+   "Quick AM",
+   "Quadrature Amplitude Modulation",
+   "Quasi AM",
+   "Query AM"
+  ],
+  "correct": 1,
+  "explain": "QAM = Quadrature Amplitude Modulation. Combine amplitude + phase."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "FSK signifie :",
+  "options": [
+   "Frequency Shift Keying",
+   "Fast SK",
+   "Filter SK",
+   "Final SK"
+  ],
+  "correct": 0,
+  "explain": "FSK = Frequency Shift Keying. Chaque symbole = fréquence différente."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "La constellation IQ représente :",
+  "options": [
+   "Le spectre",
+   "Les symboles dans le plan (I, Q)",
+   "Le temps",
+   "L'erreur"
+  ],
+  "correct": 1,
+  "explain": "Constellation : chaque symbole = un point. Axes I (en phase) et Q (quadrature)."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "La distance entre points de constellation :",
+  "options": [
+   "Augmente le bruit",
+   "Détermine la robustesse au bruit",
+   "N'a pas d'importance",
+   "Ne change rien"
+  ],
+  "correct": 1,
+  "explain": "Plus les points sont écartés, plus le décodage résiste au bruit (BER plus faible)."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Plus M est grand dans M-QAM :",
+  "options": [
+   "Plus c'est robuste",
+   "Plus le débit est élevé mais plus sensible au bruit",
+   "Aucun effet",
+   "C'est plus lent"
+  ],
+  "correct": 1,
+  "explain": "M-QAM plus dense → plus de bits/symbole mais points plus proches → moins robuste."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "L'efficacité spectrale η vaut :",
+  "options": [
+   "D × B",
+   "D / B",
+   "D + B",
+   "D − B"
+  ],
+  "correct": 1,
+  "explain": "η = D/B (bit/s/Hz). Caractérise combien on transmet dans peu de bande."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Le BER (TEB) est :",
+  "options": [
+   "Le débit",
+   "Le taux d'erreur binaire",
+   "Le bruit",
+   "La fréquence"
+  ],
+  "correct": 1,
+  "explain": "BER = Bit Error Rate = nombre de bits faux / nombre de bits transmis."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Wi-Fi (802.11) utilise principalement :",
+  "options": [
+   "AM analogique",
+   "OFDM avec QPSK → 1024-QAM",
+   "FSK simple",
+   "Manchester"
+  ],
+  "correct": 1,
+  "explain": "OFDM avec modulation adaptative selon la qualité du canal."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Bluetooth utilise :",
+  "options": [
+   "FM analogique",
+   "GFSK / π/4-DQPSK",
+   "QAM-1024",
+   "Manchester"
+  ],
+  "correct": 1,
+  "explain": "Bluetooth : GFSK (Basic Rate) et π/4-DQPSK / 8-DPSK (EDR)."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "LoRa en France fonctionne à :",
+  "options": [
+   "2,4 GHz",
+   "868 MHz",
+   "5 GHz",
+   "100 MHz"
+  ],
+  "correct": 1,
+  "explain": "LoRa EU : bande ISM 868 MHz."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "LoRa utilise la modulation :",
+  "options": [
+   "AM",
+   "OFDM",
+   "CSS (Chirp Spread Spectrum)",
+   "PWM"
+  ],
+  "correct": 2,
+  "explain": "LoRa = Chirp Spread Spectrum : impulsions chirp linéaires en fréquence."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "L'OFDM consiste à :",
+  "options": [
+   "Une seule porteuse",
+   "Diviser le canal en de nombreuses sous-porteuses orthogonales",
+   "Pas d'utilisation pratique",
+   "AM analogique"
+  ],
+  "correct": 1,
+  "explain": "OFDM : N sous-porteuses, chacune modulée plus lentement → robuste aux multi-trajets."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Le codage Manchester :",
+  "options": [
+   "Sans transition",
+   "Transition au milieu de chaque bit (auto-synchro)",
+   "RF uniquement",
+   "Pas un codage"
+  ],
+  "correct": 1,
+  "explain": "Manchester : transition forcée au milieu de chaque bit → auto-synchronisation. Ethernet 10BASE-T."
+ },
+ {
+  "theme": "T3 · Transporter",
+  "themeClass": "t3",
+  "q": "Le codage NRZ :",
+  "options": [
+   "Auto-synchronisé",
+   "Simple mais peut perdre la synchro si longue suite 0 ou 1",
+   "Optique uniquement",
+   "Manchester encodé"
+  ],
+  "correct": 1,
+  "explain": "NRZ : Non-Retour à Zéro. Simple mais nécessite des horloges précises ou un sur-codage."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Une chaîne d'action sert à :",
+  "options": [
+   "Mesurer",
+   "Commander un actionneur depuis une consigne",
+   "Filtrer",
+   "Émettre"
+  ],
+  "correct": 1,
+  "explain": "Chaîne d'action : consigne → traitement → actionneur (moteur, vérin, LED…)."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "La partie commande gère :",
+  "options": [
+   "La puissance",
+   "La logique / bas niveau",
+   "L'antenne",
+   "Le capteur"
+  ],
+  "correct": 1,
+  "explain": "Commande : µC, FPGA, faible puissance, logique."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "La partie puissance gère :",
+  "options": [
+   "La logique",
+   "L'énergie fournie à l'actionneur",
+   "Le CAN",
+   "Le filtrage"
+  ],
+  "correct": 1,
+  "explain": "Partie puissance : transistors de puissance, drivers, hacheurs."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "PWM signifie :",
+  "options": [
+   "Power Width Mode",
+   "Pulse Width Modulation",
+   "Plus Wide Mode",
+   "Power Wave Module"
+  ],
+  "correct": 1,
+  "explain": "PWM = Pulse Width Modulation (en français : MLI, Modulation de Largeur d'Impulsion)."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "En PWM, on fait varier :",
+  "options": [
+   "La fréquence",
+   "Le rapport cyclique α",
+   "L'amplitude",
+   "La forme"
+  ],
+  "correct": 1,
+  "explain": "α = t_on/T varie. La période T reste constante."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "La valeur moyenne d'un PWM vaut :",
+  "options": [
+   "α × V_max",
+   "α + V_max",
+   "α/V_max",
+   "V_max"
+  ],
+  "correct": 0,
+  "explain": "⟨V⟩ = α·V_max. Pour α = 0,5, V_max = 12V → 6V."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Pour piloter un moteur DC en vitesse/sens :",
+  "options": [
+   "Un relais on/off",
+   "PWM + pont en H",
+   "Un transformateur",
+   "Une diode seule"
+  ],
+  "correct": 1,
+  "explain": "Pont en H : 4 transistors → contrôle vitesse (PWM) et sens (combinaisons)."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Un système en boucle ouverte :",
+  "options": [
+   "A un retour",
+   "N'a pas de capteur de retour",
+   "Est asservi",
+   "Est précis"
+  ],
+  "correct": 1,
+  "explain": "Boucle ouverte : pas de feedback. Sortie non comparée à la consigne."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Un système en boucle fermée (asservissement) :",
+  "options": [
+   "Pas de capteur",
+   "Capteur mesure la sortie, comparée à consigne",
+   "Sortie indépendante",
+   "Pas de correcteur"
+  ],
+  "correct": 1,
+  "explain": "Asservissement : sortie mesurée, comparée à consigne, le correcteur agit sur l'écart."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "L'erreur dans un asservissement vaut :",
+  "options": [
+   "c × m",
+   "c − m (consigne − mesure)",
+   "c + m",
+   "c / m"
+  ],
+  "correct": 1,
+  "explain": "ε = c − m. Le correcteur fournit la commande à partir de ε."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Les 3 critères d'un système bouclé :",
+  "options": [
+   "Coût, taille, poids",
+   "Rapidité, précision, stabilité",
+   "Tension, courant, R",
+   "Couleur, forme, masse"
+  ],
+  "correct": 1,
+  "explain": "Triptyque : rapidité (temps), précision (erreur statique), stabilité (pas de divergence)."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "La rapidité se mesure souvent par :",
+  "options": [
+   "La précision",
+   "Le temps de réponse à 5 %",
+   "Le gain",
+   "Le bruit"
+  ],
+  "correct": 1,
+  "explain": "t_r,5% : temps pour entrer dans ±5 % de la valeur finale et y rester."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "La précision statique caractérise :",
+  "options": [
+   "La vitesse",
+   "L'écart ε∞ en régime permanent",
+   "Le dépassement",
+   "La marge"
+  ],
+  "correct": 1,
+  "explain": "ε∞ = écart résiduel entre consigne et sortie en régime établi."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Action proportionnelle (P) :",
+  "options": [
+   "Annule l'erreur statique",
+   "Accélère mais peut déstabiliser",
+   "Filtre le bruit",
+   "Génère du bruit"
+  ],
+  "correct": 1,
+  "explain": "P : ↑ rapidité, ↑ précision (selon classe), ↓ stabilité (oscillations si gain trop élevé)."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Action intégrale (I) :",
+  "options": [
+   "Bruit max",
+   "Annule ε∞ mais peut déstabiliser",
+   "Filtre HF",
+   "Augmente amplitude"
+  ],
+  "correct": 1,
+  "explain": "I : élimine l'erreur statique (intègre ε), mais ralentit et déstabilise."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Action dérivée (D) :",
+  "options": [
+   "Diminue stabilité",
+   "Améliore stabilité et anticipe",
+   "Annule ε∞",
+   "Filtre HF"
+  ],
+  "correct": 1,
+  "explain": "D : agit sur la dérivée de ε → anticipation, amortissement. Sensible au bruit."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Un correcteur PI combine :",
+  "options": [
+   "P seul",
+   "P + I",
+   "I + D",
+   "Seulement D"
+  ],
+  "correct": 1,
+  "explain": "PI : P (rapidité) + I (annulation ε∞). Le plus utilisé en industrie."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Un correcteur PID combine :",
+  "options": [
+   "P + I",
+   "P + D",
+   "P + I + D",
+   "I + D"
+  ],
+  "correct": 2,
+  "explain": "PID : les 3 actions ensemble → rapide, précis, stable."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Le dépassement d'un système se note :",
+  "options": [
+   "En seconde",
+   "En % au-dessus de la valeur finale",
+   "En dB",
+   "En Hz"
+  ],
+  "correct": 1,
+  "explain": "Dépassement (overshoot) D% : écart max au-dessus de la consigne, en pourcent."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Pour un 1er ordre, à t = τ, la sortie atteint :",
+  "options": [
+   "50 %",
+   "63 %",
+   "95 %",
+   "100 %"
+  ],
+  "correct": 1,
+  "explain": "s(τ) = T₀·E·(1−1/e) ≈ 0,63·T₀·E ≈ 63 % de la valeur finale."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Pour un 1er ordre, t_r,5% ≈ :",
+  "options": [
+   "τ",
+   "2τ",
+   "3τ",
+   "5τ"
+  ],
+  "correct": 2,
+  "explain": "t_r,5% ≈ 3τ pour atteindre 95 % de la valeur finale (1er ordre)."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Un système du 2ᵉ ordre avec m < 1 :",
+  "options": [
+   "Pas de dépassement",
+   "Régime oscillatoire amorti avec dépassement",
+   "Toujours instable",
+   "Apériodique"
+  ],
+  "correct": 1,
+  "explain": "m < 1 : oscillations amorties + dépassement. m croît → dépassement décroît."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Un système du 2ᵉ ordre avec m > 1 :",
+  "options": [
+   "Oscille",
+   "Apériodique sans dépassement",
+   "Régime critique",
+   "Instable"
+  ],
+  "correct": 1,
+  "explain": "m > 1 : la sortie tend vers la valeur finale sans osciller, mais plus lentement."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Régime critique d'un 2ᵉ ordre :",
+  "options": [
+   "m = 0",
+   "m = 1 (le plus rapide sans dépassement)",
+   "m = 2",
+   "m = ∞"
+  ],
+  "correct": 1,
+  "explain": "m = 1 : compromis idéal entre rapidité et absence de dépassement."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Pour stabiliser un asservissement on peut :",
+  "options": [
+   "Augmenter le gain",
+   "Réduire le gain ou ajouter une action D",
+   "Supprimer le capteur",
+   "Couper le retour"
+  ],
+  "correct": 1,
+  "explain": "Réduire K_p OU ajouter une action D → augmente la stabilité."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Un système instable :",
+  "options": [
+   "Oscille amorti",
+   "Sa sortie diverge ou oscille sans amortissement",
+   "Atteint la consigne",
+   "Est rapide"
+  ],
+  "correct": 1,
+  "explain": "Instable : sortie qui diverge ou oscille indéfiniment."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Un actionneur typique est :",
+  "options": [
+   "Photodiode",
+   "Moteur DC",
+   "Microphone",
+   "Thermocouple"
+  ],
+  "correct": 1,
+  "explain": "Actionneurs : moteurs, vérins, LED puissance, résistances chauffantes. Les autres sont des capteurs."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Un AOP en montage intégrateur réalise :",
+  "options": [
+   "s = de/dt",
+   "s = ∫e·dt",
+   "s = e²",
+   "s = e × R"
+  ],
+  "correct": 1,
+  "explain": "Intégrateur : V_s = −(1/RC)·∫V_e·dt. R en entrée, C en contre-réaction."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Un AOP en montage dérivateur réalise :",
+  "options": [
+   "s = ∫e·dt",
+   "s = de/dt",
+   "s = e²",
+   "s = e + R"
+  ],
+  "correct": 1,
+  "explain": "Dérivateur : V_s = −RC·dV_e/dt. C en entrée, R en contre-réaction."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Un AOP en comparateur (sans contre-réaction) :",
+  "options": [
+   "Reste linéaire",
+   "Sature à V+ ou V− selon le signe de V_e − V_ref",
+   "Oscille",
+   "Filtre"
+  ],
+  "correct": 1,
+  "explain": "Comparateur : sortie = V_sat selon le signe. Utile pour seuils, conversions analog/digit."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Le diagramme de Bode représente :",
+  "options": [
+   "Gain et phase vs log(f)",
+   "Le signal temporel",
+   "La consommation",
+   "L'erreur"
+  ],
+  "correct": 0,
+  "explain": "Bode : G(dB) et φ(°) en fonction de log(f). Outil clé en option B."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Le critère du revers (option B) sert à étudier :",
+  "options": [
+   "Une fréquence",
+   "La stabilité d'un système bouclé via le Bode FTBO",
+   "Le débit",
+   "Le bruit"
+  ],
+  "correct": 1,
+  "explain": "Critère du revers : sur le Bode de la FTBO, à |T| = 0 dB on regarde la phase."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Marge de phase typique souhaitée :",
+  "options": [
+   "< 10°",
+   "> 45°",
+   "= 0°",
+   "Négative"
+  ],
+  "correct": 1,
+  "explain": "M_φ > 45° pour une stabilité confortable. < 45° → oscillations probables."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Marge de gain typique souhaitée :",
+  "options": [
+   "< 1 dB",
+   "> 6 dB",
+   "= 0 dB",
+   "Négative"
+  ],
+  "correct": 1,
+  "explain": "M_G > 6 dB recommandée. C'est la marge avant atteinte du gain critique."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Augmenter K_p tend à :",
+  "options": [
+   "Augmenter la marge de phase",
+   "Diminuer la marge de phase (système moins stable)",
+   "Aucun effet",
+   "Filtrer"
+  ],
+  "correct": 1,
+  "explain": "K_p ↑ → courbe Bode monte → la fréquence de coupure ω_co augmente → M_φ diminue."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "La FTBO est :",
+  "options": [
+   "La fonction du capteur",
+   "La fonction de transfert en boucle ouverte",
+   "L'antenne",
+   "Le filtre"
+  ],
+  "correct": 1,
+  "explain": "FTBO = produit de toutes les fonctions de transfert du tour de boucle (correcteur × système × capteur)."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "La FTBF est :",
+  "options": [
+   "Idem FTBO",
+   "La FT en boucle fermée = FTBO/(1+FTBO)",
+   "Le capteur seul",
+   "Une constante"
+  ],
+  "correct": 1,
+  "explain": "FTBF = FTBO/(1+FTBO·H). Si H = 1, FTBF = FTBO/(1+FTBO)."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Une perturbation z(t) en boucle fermée :",
+  "options": [
+   "A le même effet qu'en BO",
+   "Est atténuée par 1/(1 + FTBO)",
+   "Augmente l'erreur",
+   "Détruit le système"
+  ],
+  "correct": 1,
+  "explain": "Avantage du bouclage : les perturbations sont atténuées par le facteur 1/(1+FTBO)."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Le gain statique en boucle fermée K_BF tend vers :",
+  "options": [
+   "FTBO/(1+FTBO)",
+   "K_BO si K_BO >> 1 → 1",
+   "0",
+   "FTBO seule"
+  ],
+  "correct": 1,
+  "explain": "Si K_BO grand, K_BF ≈ 1 (asservissement précis : sortie ≈ consigne)."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "L'erreur statique d'une classe 0 sous échelon est :",
+  "options": [
+   "Nulle",
+   "Non nulle (1/(1+K))",
+   "Infinie",
+   "Variable"
+  ],
+  "correct": 1,
+  "explain": "Classe 0 (pas d'intégrateur) → ε∞ = E/(1+K_BO) ≠ 0."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Pour ε∞ = 0 sous échelon, il faut :",
+  "options": [
+   "K très grand seulement",
+   "Au moins un intégrateur (classe ≥ 1)",
+   "Un dérivateur",
+   "Aucun correcteur"
+  ],
+  "correct": 1,
+  "explain": "Un intégrateur dans la boucle ouverte → ε∞ = 0 pour une consigne en échelon."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "La fréquence de coupure à 0 dB ω_co est :",
+  "options": [
+   "Là où le Bode coupe l'axe 0 dB",
+   "La fréquence de Shannon",
+   "Le bruit",
+   "Sans rapport"
+  ],
+  "correct": 0,
+  "explain": "ω_co (gain crossover) : fréquence à laquelle |T(jω)| = 1 = 0 dB."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Le déphasage à ω_co donne :",
+  "options": [
+   "Le débit",
+   "La marge de phase = 180° + φ(ω_co)",
+   "Le bruit",
+   "Le SNR"
+  ],
+  "correct": 1,
+  "explain": "M_φ = 180° + φ(ω_co). Si M_φ > 0 → stable."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Le placement de pôles consiste à :",
+  "options": [
+   "Déplacer le correcteur",
+   "Choisir les pôles du système bouclé pour des perf données",
+   "Filtrer",
+   "Numériser"
+  ],
+  "correct": 1,
+  "explain": "On choisit la position des pôles de la FTBF (par K_p, K_i…) pour fixer rapidité et amortissement."
+ },
+ {
+  "theme": "T4 · Utiliser",
+  "themeClass": "t4",
+  "q": "Un correcteur à avance de phase :",
+  "options": [
+   "Réduit la marge de phase",
+   "Augmente la marge de phase localement",
+   "Inverse la sortie",
+   "Filtre HF"
+  ],
+  "correct": 1,
+  "explain": "Correcteur à avance de phase : ajoute du déphasage positif autour de ω_co → améliore la stabilité."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "La loi d'Ohm s'écrit :",
+  "options": [
+   "U = R + I",
+   "U = R × I",
+   "U = R / I",
+   "U = R²"
+  ],
+  "correct": 1,
+  "explain": "U = R·I. Tension proportionnelle à l'intensité (conducteur ohmique)."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Loi des mailles :",
+  "options": [
+   "Σ U = 0 sur une maille",
+   "Σ I = 0",
+   "U constant",
+   "R constant"
+  ],
+  "correct": 0,
+  "explain": "Kirchhoff : Σ U = 0 sur une boucle fermée."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Loi des nœuds :",
+  "options": [
+   "Σ I_entrants = Σ I_sortants",
+   "Σ U = 0",
+   "I = U×R",
+   "I = U/R"
+  ],
+  "correct": 0,
+  "explain": "Kirchhoff : la somme des courants entrant dans un nœud = somme sortant."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "R1 et R2 en série :",
+  "options": [
+   "R_eq = R1 × R2",
+   "R_eq = R1 + R2",
+   "R_eq = R1·R2/(R1+R2)",
+   "R_eq = R1/R2"
+  ],
+  "correct": 1,
+  "explain": "Série : les R s'additionnent."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "R1 et R2 en parallèle :",
+  "options": [
+   "R1 + R2",
+   "R1·R2/(R1+R2)",
+   "R1 − R2",
+   "(R1+R2)/2"
+  ],
+  "correct": 1,
+  "explain": "Parallèle : R_eq = R1·R2/(R1+R2). Deux R égales : R/2."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Diviseur de tension : U2 = ?",
+  "options": [
+   "U·R1/(R1+R2)",
+   "U·R2/(R1+R2)",
+   "U·R1·R2",
+   "U/(R1+R2)"
+  ],
+  "correct": 1,
+  "explain": "U2 = U × R2/(R1+R2). U2 est la tension aux bornes de R2."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Puissance dissipée par R :",
+  "options": [
+   "U+I",
+   "U·I = R·I² = U²/R",
+   "U/I",
+   "R/U"
+  ],
+  "correct": 1,
+  "explain": "P = U·I (formule générale). En R : P = R·I² = U²/R."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Énergie consommée :",
+  "options": [
+   "P·t",
+   "P+t",
+   "P/t",
+   "P²"
+  ],
+  "correct": 0,
+  "explain": "E = P·t. En joules ou Wh."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "1 Wh =",
+  "options": [
+   "1 J",
+   "60 J",
+   "3600 J",
+   "100 J"
+  ],
+  "correct": 2,
+  "explain": "1 Wh = 1 W × 3600 s = 3600 J."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Autonomie batterie :",
+  "options": [
+   "Q × I",
+   "Q / I",
+   "Q + I",
+   "Q²"
+  ],
+  "correct": 1,
+  "explain": "t = Q/I. Q en Ah, I en A → t en h."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Pulsation ω :",
+  "options": [
+   "2π·f",
+   "f/2π",
+   "f·π",
+   "f"
+  ],
+  "correct": 0,
+  "explain": "ω = 2π·f (rad/s)."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Période T :",
+  "options": [
+   "T = f",
+   "T = 1/f",
+   "T = 2π·f",
+   "T = f²"
+  ],
+  "correct": 1,
+  "explain": "T = 1/f. T en s, f en Hz."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Pour f = 50 Hz, T vaut :",
+  "options": [
+   "50 s",
+   "20 ms",
+   "2 s",
+   "0,5 s"
+  ],
+  "correct": 1,
+  "explain": "T = 1/50 = 0,02 s = 20 ms (secteur français)."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Valeur efficace d'une sinusoïde pure :",
+  "options": [
+   "U_m",
+   "U_m/2",
+   "U_m/√2",
+   "U_m × √2"
+  ],
+  "correct": 2,
+  "explain": "U_eff = U_m/√2 (sinusoïde uniquement, sans offset)."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Secteur 230 V eff → U_m vaut :",
+  "options": [
+   "230 V",
+   "162 V",
+   "325 V",
+   "460 V"
+  ],
+  "correct": 2,
+  "explain": "U_m = 230·√2 ≈ 325 V crête."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Impédance d'une R :",
+  "options": [
+   "R",
+   "1/(jCω)",
+   "jLω",
+   "0"
+  ],
+  "correct": 0,
+  "explain": "Z_R = R, réelle, indépendante de f."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Impédance d'un C :",
+  "options": [
+   "R",
+   "1/(jCω)",
+   "jLω",
+   "1"
+  ],
+  "correct": 1,
+  "explain": "Z_C = 1/(jCω). |Z_C| = 1/(Cω)."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Impédance d'une L :",
+  "options": [
+   "R",
+   "1/(jCω)",
+   "jLω",
+   "jω/L"
+  ],
+  "correct": 2,
+  "explain": "Z_L = jLω. |Z_L| = Lω."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "En TBF, C se comporte comme :",
+  "options": [
+   "Court-circuit",
+   "Circuit ouvert",
+   "R pure",
+   "Inductance"
+  ],
+  "correct": 1,
+  "explain": "ω → 0 → Z_C → ∞ → circuit ouvert."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "En HF, C se comporte comme :",
+  "options": [
+   "Court-circuit",
+   "Circuit ouvert",
+   "R",
+   "Inductance"
+  ],
+  "correct": 0,
+  "explain": "ω → ∞ → Z_C → 0 → court-circuit."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "En TBF, L se comporte comme :",
+  "options": [
+   "Court-circuit",
+   "Circuit ouvert",
+   "R",
+   "C"
+  ],
+  "correct": 0,
+  "explain": "ω → 0 → Z_L → 0 → court-circuit."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "En HF, L se comporte comme :",
+  "options": [
+   "Court-circuit",
+   "Circuit ouvert",
+   "R",
+   "C"
+  ],
+  "correct": 1,
+  "explain": "ω → ∞ → Z_L → ∞ → circuit ouvert."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Déphasage U/I dans une R :",
+  "options": [
+   "0°",
+   "+90°",
+   "−90°",
+   "180°"
+  ],
+  "correct": 0,
+  "explain": "Résistance pure : U et I en phase (φ = 0)."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Déphasage U/I dans un C :",
+  "options": [
+   "0°",
+   "+90°",
+   "−90° (I avance sur U)",
+   "180°"
+  ],
+  "correct": 2,
+  "explain": "Capacité : I avance de 90° sur U."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Déphasage U/I dans une L :",
+  "options": [
+   "0°",
+   "+90° (I retard sur U)",
+   "−90°",
+   "180°"
+  ],
+  "correct": 1,
+  "explain": "Inductance : I retard de 90° sur U."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Puissance active en sinus :",
+  "options": [
+   "U_eff·I_eff",
+   "U_eff·I_eff·cos(φ)",
+   "U_m·I_m",
+   "0"
+  ],
+  "correct": 1,
+  "explain": "P = U_eff·I_eff·cos(φ). cos(φ) = facteur de puissance."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Puissance réactive :",
+  "options": [
+   "U·I",
+   "U·I·sin(φ)",
+   "U·I/cos(φ)",
+   "0"
+  ],
+  "correct": 1,
+  "explain": "Q = U_eff·I_eff·sin(φ). Énergie qui oscille entre source et charge sans être consommée."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Puissance apparente :",
+  "options": [
+   "U·I",
+   "U·I·cos(φ)",
+   "P + Q",
+   "P²"
+  ],
+  "correct": 0,
+  "explain": "S = U_eff·I_eff (VA). S² = P² + Q²."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "cos(φ) = 1 quand :",
+  "options": [
+   "Charge résistive pure",
+   "Charge inductive pure",
+   "Charge capacitive pure",
+   "Aucune"
+  ],
+  "correct": 0,
+  "explain": "cos(0) = 1 → charge purement résistive (U et I en phase)."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "U en dBV :",
+  "options": [
+   "U(dBV) = U",
+   "U(dBV) = 20·log(U/1V)",
+   "U(dBV) = 10·log U",
+   "U(dBV) = U²"
+  ],
+  "correct": 1,
+  "explain": "Référence 1 V : U(dBV) = 20·log(U/1V). Ex : 0 dBV = 1 V."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "P en dBm :",
+  "options": [
+   "P(dBm) = P",
+   "P(dBm) = 10·log(P/1mW)",
+   "P(dBm) = 20·log P",
+   "P(dBm) = P²"
+  ],
+  "correct": 1,
+  "explain": "Référence 1 mW : P(dBm) = 10·log(P/1mW)."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Adaptation en puissance :",
+  "options": [
+   "Z_s = 0",
+   "Z_s = Z_e (impédances égales)",
+   "Z_s >> Z_e",
+   "Z_s = ∞"
+  ],
+  "correct": 1,
+  "explain": "Adaptation en puissance : Z_s = Z_e* → P_transmise max."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Adaptation en tension :",
+  "options": [
+   "Z_s = Z_e",
+   "Z_s << Z_e",
+   "Z_s = ∞",
+   "Z_s = 0"
+  ],
+  "correct": 1,
+  "explain": "Z_s << Z_e → quasi-totalité de la tension transmise (instrumentation)."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Adaptation en courant :",
+  "options": [
+   "Z_s >> Z_e",
+   "Z_s = Z_e",
+   "Z_s << Z_e",
+   "Z_s = ∞"
+  ],
+  "correct": 0,
+  "explain": "Z_s >> Z_e → courant transmis sans chute (capteurs courant)."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Modèle de Thévenin :",
+  "options": [
+   "Source courant + R parallèle",
+   "Source tension en série avec Z",
+   "R seule",
+   "Capteur"
+  ],
+  "correct": 1,
+  "explain": "Thévenin : E_th en série avec Z_th. Équivalent de tout dipôle linéaire."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Modèle de Norton :",
+  "options": [
+   "Source courant en parallèle avec Z",
+   "Source tension en série",
+   "R seule",
+   "Capacité"
+  ],
+  "correct": 0,
+  "explain": "Norton : I_N en parallèle avec Z_N. Dual de Thévenin."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Énergie stockée dans C :",
+  "options": [
+   "½·C·U²",
+   "C·U",
+   "C·U²",
+   "U²/C"
+  ],
+  "correct": 0,
+  "explain": "W = ½·C·U². Le condensateur stocke l'énergie électrique."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Énergie stockée dans L :",
+  "options": [
+   "½·L·I²",
+   "L·I",
+   "L·I²",
+   "I²/L"
+  ],
+  "correct": 0,
+  "explain": "W = ½·L·I². L stocke l'énergie magnétique."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Effet Joule :",
+  "options": [
+   "Refroidit R",
+   "R dissipe P = R·I² en chaleur",
+   "Stocke l'énergie",
+   "Génère du courant"
+  ],
+  "correct": 1,
+  "explain": "Effet Joule : énergie électrique → chaleur dans une R."
+ },
+ {
+  "theme": "Élec · Lois",
+  "themeClass": "tt",
+  "q": "Une diode est :",
+  "options": [
+   "Symétrique",
+   "Unidirectionnelle",
+   "Une R",
+   "Une source"
+  ],
+  "correct": 1,
+  "explain": "Diode : passante en direct (≈ 0,7 V), bloquée en inverse."
+ },
+ {
+  "theme": "Signaux",
+  "themeClass": "tt",
+  "q": "Signal périodique :",
+  "options": [
+   "Aléatoire",
+   "Se répète avec une période T",
+   "Sinusoïdal uniquement",
+   "Continu"
+  ],
+  "correct": 1,
+  "explain": "Périodique : f(t+T) = f(t)."
+ },
+ {
+  "theme": "Signaux",
+  "themeClass": "tt",
+  "q": "Fréquence = ?",
+  "options": [
+   "T",
+   "1/T",
+   "T²",
+   "2T"
+  ],
+  "correct": 1,
+  "explain": "f = 1/T (Hz)."
+ },
+ {
+  "theme": "Signaux",
+  "themeClass": "tt",
+  "q": "Moyenne d'une sinusoïde pure (sans offset) :",
+  "options": [
+   "U_m",
+   "0",
+   "U_m/2",
+   "U_m/√2"
+  ],
+  "correct": 1,
+  "explain": "Sinusoïde centrée : autant de + que de − → moyenne nulle."
+ },
+ {
+  "theme": "Signaux",
+  "themeClass": "tt",
+  "q": "Valeur efficace sinusoïde pure :",
+  "options": [
+   "U_m",
+   "U_m/2",
+   "U_m/√2",
+   "0"
+  ],
+  "correct": 2,
+  "explain": "U_eff = U_m/√2."
+ },
+ {
+  "theme": "Signaux",
+  "themeClass": "tt",
+  "q": "Valeur crête à crête de U_m = 5V :",
+  "options": [
+   "5 V",
+   "10 V",
+   "2,5 V",
+   "0"
+  ],
+  "correct": 1,
+  "explain": "U_cc = 2·U_m = 10 V."
+ },
+ {
+  "theme": "Signaux",
+  "themeClass": "tt",
+  "q": "Spectre d'un signal DC :",
+  "options": [
+   "Une raie à f = 0",
+   "Une raie à f₀",
+   "Continu",
+   "Aucun"
+  ],
+  "correct": 0,
+  "explain": "Continu DC = raie à f = 0."
+ },
+ {
+  "theme": "Signaux",
+  "themeClass": "tt",
+  "q": "Spectre d'un sinus pur :",
+  "options": [
+   "Continu",
+   "Une raie à f₀",
+   "Plusieurs harmoniques",
+   "Aucun"
+  ],
+  "correct": 1,
+  "explain": "Sinus pur = 1 raie spectrale à sa fréquence."
+ },
+ {
+  "theme": "Signaux",
+  "themeClass": "tt",
+  "q": "Signal périodique non sinus :",
+  "options": [
+   "1 raie",
+   "DC + fondamental + harmoniques",
+   "Spectre continu",
+   "Aucun"
+  ],
+  "correct": 1,
+  "explain": "Décomposition de Fourier : Σ harmoniques n·f₀."
+ },
+ {
+  "theme": "Signaux",
+  "themeClass": "tt",
+  "q": "Le fondamental est :",
+  "options": [
+   "L'harmonique 2",
+   "La raie à f₀ (rang 1)",
+   "Le DC",
+   "Le bruit"
+  ],
+  "correct": 1,
+  "explain": "Fondamental = raie à la fréquence f₀."
+ },
+ {
+  "theme": "Signaux",
+  "themeClass": "tt",
+  "q": "Harmonique de rang n :",
+  "options": [
+   "n·f₀",
+   "f₀/n",
+   "f₀ + n",
+   "f₀ − n"
+  ],
+  "correct": 0,
+  "explain": "À la fréquence n·f₀."
+ },
+ {
+  "theme": "Signaux",
+  "themeClass": "tt",
+  "q": "Encombrement spectral :",
+  "options": [
+   "La P max",
+   "Largeur de bande occupée",
+   "Durée",
+   "Hauteur"
+  ],
+  "correct": 1,
+  "explain": "B = largeur en Hz occupée."
+ },
+ {
+  "theme": "Signaux",
+  "themeClass": "tt",
+  "q": "Bruit blanc :",
+  "options": [
+   "1 raie",
+   "Densité spectrale uniforme",
+   "Spectre nul",
+   "1 fréquence"
+  ],
+  "correct": 1,
+  "explain": "Bruit blanc : toutes les fréquences également représentées (DSP constante)."
+ },
+ {
+  "theme": "Signaux",
+  "themeClass": "tt",
+  "q": "SNR (Signal-to-Noise Ratio) :",
+  "options": [
+   "P_signal × P_bruit",
+   "P_signal/P_bruit",
+   "P_signal − P_bruit",
+   "Une fréquence"
+  ],
+  "correct": 1,
+  "explain": "SNR = P_signal/P_bruit. Souvent en dB."
+ },
+ {
+  "theme": "Signaux",
+  "themeClass": "tt",
+  "q": "SNR = 0 dB signifie :",
+  "options": [
+   "Signal nul",
+   "P_signal = P_bruit",
+   "Très bon signal",
+   "Bruit nul"
+  ],
+  "correct": 1,
+  "explain": "0 dB = rapport 1. Signal = bruit."
+ },
+ {
+  "theme": "Signaux",
+  "themeClass": "tt",
+  "q": "SNR = 20 dB → rapport :",
+  "options": [
+   "2",
+   "10",
+   "100",
+   "1000"
+  ],
+  "correct": 2,
+  "explain": "10^(20/10) = 100."
+ },
+ {
+  "theme": "Signaux",
+  "themeClass": "tt",
+  "q": "FFT (Fast Fourier Transform) :",
+  "options": [
+   "Filtre",
+   "Calcule rapidement le spectre",
+   "Amplifie",
+   "Numérise"
+  ],
+  "correct": 1,
+  "explain": "FFT : du temps vers la fréquence (efficacement)."
+ },
+ {
+  "theme": "Signaux",
+  "themeClass": "tt",
+  "q": "Analyseur de spectre :",
+  "options": [
+   "Voltmètre",
+   "Affiche le spectre fréquentiel",
+   "Wattmètre",
+   "Oscillo"
+  ],
+  "correct": 1,
+  "explain": "Analyseur de spectre : amplitude vs fréquence."
+ },
+ {
+  "theme": "Signaux",
+  "themeClass": "tt",
+  "q": "Oscilloscope :",
+  "options": [
+   "Affiche spectre",
+   "Affiche u(t)",
+   "Spectro",
+   "Multimètre"
+  ],
+  "correct": 1,
+  "explain": "Oscillo : tension en fonction du temps."
+ },
+ {
+  "theme": "Signaux",
+  "themeClass": "tt",
+  "q": "U(dBV) si U = 1 V :",
+  "options": [
+   "0 dBV",
+   "1 dBV",
+   "20 dBV",
+   "100 dBV"
+  ],
+  "correct": 0,
+  "explain": "0 dBV = 1 V (référence)."
+ },
+ {
+  "theme": "Signaux",
+  "themeClass": "tt",
+  "q": "U(dBV) si U = 1 mV :",
+  "options": [
+   "−60 dBV",
+   "−3 dBV",
+   "0 dBV",
+   "3 dBV"
+  ],
+  "correct": 0,
+  "explain": "20·log(0,001/1) = −60 dBV."
+ },
+ {
+  "theme": "Signaux",
+  "themeClass": "tt",
+  "q": "Signal carré → spectre :",
+  "options": [
+   "1 raie",
+   "Riche en harmoniques impaires",
+   "Continu",
+   "Nul"
+  ],
+  "correct": 1,
+  "explain": "Carré idéal = somme du fondamental + harmoniques 3, 5, 7…"
+ },
+ {
+  "theme": "Signaux",
+  "themeClass": "tt",
+  "q": "Densité spectrale de puissance (DSP) :",
+  "options": [
+   "P par unité de fréquence",
+   "Tension max",
+   "Durée",
+   "Aucun"
+  ],
+  "correct": 0,
+  "explain": "DSP : répartition de la puissance en fonction de f. Pour signaux non périodiques."
+ },
+ {
+  "theme": "Signaux",
+  "themeClass": "tt",
+  "q": "Bruit thermique :",
+  "options": [
+   "Du soleil",
+   "Agitation thermique des électrons (Johnson-Nyquist)",
+   "De l'humidité",
+   "Wi-Fi"
+  ],
+  "correct": 1,
+  "explain": "P_bruit = k_B·T·B. Présent dans toute résistance à T > 0."
+ },
+ {
+  "theme": "Signaux",
+  "themeClass": "tt",
+  "q": "Distorsion harmonique (THD) :",
+  "options": [
+   "Bruit",
+   "Énergie dans les harmoniques par rapport au fondamental",
+   "Le SNR",
+   "La durée"
+  ],
+  "correct": 1,
+  "explain": "THD = √(Σ U_n² pour n > 1) / U_1. Faible pour signaux purs."
+ },
+ {
+  "theme": "Signaux",
+  "themeClass": "tt",
+  "q": "Signal NRZ binaire :",
+  "options": [
+   "Alterne + et − en milieu",
+   "2 niveaux constants pendant le bit",
+   "Manchester",
+   "PCM"
+  ],
+  "correct": 1,
+  "explain": "NRZ : niveau constant pendant la durée d'un bit."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Passe-bas :",
+  "options": [
+   "Laisse passer les HF",
+   "Laisse passer les BF (< fc)",
+   "Toutes les f",
+   "Aucune"
+  ],
+  "correct": 1,
+  "explain": "Passe-bas : f < fc passent, f > fc atténuées."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Passe-haut :",
+  "options": [
+   "Laisse passer les BF",
+   "Laisse passer les HF (> fc)",
+   "Une seule f",
+   "Aucune"
+  ],
+  "correct": 1,
+  "explain": "Passe-haut : f > fc passent."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Passe-bande :",
+  "options": [
+   "Toutes f sauf une bande",
+   "Une bande [f1; f2]",
+   "Que DC",
+   "Aucune"
+  ],
+  "correct": 1,
+  "explain": "Passe-bande : f1 ≤ f ≤ f2 passent."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Coupe-bande (notch) :",
+  "options": [
+   "Laisse tout",
+   "Atténue une bande spécifique",
+   "Que f₀",
+   "Tout bloque"
+  ],
+  "correct": 1,
+  "explain": "Notch : atténue une bande précise (ex : 50 Hz parasite)."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Fréquence de coupure fc définie à :",
+  "options": [
+   "+3 dB max",
+   "−3 dB du max",
+   "0 dB",
+   "−20 dB"
+  ],
+  "correct": 1,
+  "explain": "fc : point où |T| = T_max/√2 → −3 dB."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Filtre RC passe-bas, fc = ?",
+  "options": [
+   "1/(2πRC)",
+   "RC",
+   "2πRC",
+   "1/RC"
+  ],
+  "correct": 0,
+  "explain": "fc = 1/(2πRC). À mémoriser."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "R = 1 kΩ, C = 1 µF → fc :",
+  "options": [
+   "≈ 159 Hz",
+   "1 kHz",
+   "10 kHz",
+   "1 MHz"
+  ],
+  "correct": 0,
+  "explain": "fc = 1/(2π·10³·10⁻⁶) ≈ 159 Hz."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "R = 10 kΩ, C = 1 µF → fc :",
+  "options": [
+   "≈ 16 Hz",
+   "1,6 kHz",
+   "16 kHz",
+   "159 Hz"
+  ],
+  "correct": 0,
+  "explain": "fc = 1/(2π·10⁴·10⁻⁶) ≈ 16 Hz."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Pente 1er ordre passe-bas après fc :",
+  "options": [
+   "−20 dB/décade",
+   "−40 dB/décade",
+   "−10 dB/décade",
+   "0"
+  ],
+  "correct": 0,
+  "explain": "−20 dB/déc = −6 dB/octave."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Pente 2ᵉ ordre :",
+  "options": [
+   "−20 dB/déc",
+   "−40 dB/déc",
+   "−60 dB/déc",
+   "0"
+  ],
+  "correct": 1,
+  "explain": "2e ordre : −40 dB/décade."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Pente 4ᵉ ordre :",
+  "options": [
+   "−20 dB/déc",
+   "−40 dB/déc",
+   "−80 dB/déc",
+   "0"
+  ],
+  "correct": 2,
+  "explain": "Ordre n : −20n dB/décade."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Décade :",
+  "options": [
+   "×2 en f",
+   "×10 en f",
+   "+10 Hz",
+   "×100"
+  ],
+  "correct": 1,
+  "explain": "Décade = facteur 10."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Octave :",
+  "options": [
+   "×2 en f",
+   "×10",
+   "×8",
+   "+2 Hz"
+  ],
+  "correct": 0,
+  "explain": "Octave = ×2 en fréquence."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "−20 dB/déc = ?",
+  "options": [
+   "−6 dB/octave",
+   "−3 dB/oct",
+   "−20 dB/oct",
+   "0"
+  ],
+  "correct": 0,
+  "explain": "−20 dB/décade ≈ −6 dB/octave."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Diagramme de Bode :",
+  "options": [
+   "G(t), φ(t)",
+   "G et φ en fonction de log(f)",
+   "u(t)",
+   "i(t)"
+  ],
+  "correct": 1,
+  "explain": "Bode : 2 courbes (gain dB et phase °) vs log(f)."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "À f = fc d'un 1er ordre passe-bas :",
+  "options": [
+   "Gain = 0 dB",
+   "Gain max − 3 dB",
+   "Gain max",
+   "−∞ dB"
+  ],
+  "correct": 1,
+  "explain": "À fc : G = G_max − 3 dB. Définition."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Phase à fc d'un 1er ordre passe-bas :",
+  "options": [
+   "0°",
+   "−45°",
+   "−90°",
+   "−180°"
+  ],
+  "correct": 1,
+  "explain": "1er ordre passe-bas : à fc, φ = −45°. Tend vers −90° en HF."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Phase HF (f >> fc) d'un 1er ordre passe-bas :",
+  "options": [
+   "0°",
+   "−45°",
+   "−90°",
+   "−180°"
+  ],
+  "correct": 2,
+  "explain": "Asymptote : −90° pour 1er ordre passe-bas."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Filtre actif (avec AOP) avantage :",
+  "options": [
+   "Pas d'alim",
+   "Gain > 1 possible, isolation, faible impédance sortie",
+   "Plus lent",
+   "Moins précis"
+  ],
+  "correct": 1,
+  "explain": "Filtre actif : ajoute du gain, isole les étages, peut faire des ordres supérieurs."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Inconvénient filtre actif :",
+  "options": [
+   "Nécessite alim",
+   "Pas de gain",
+   "Pas de filtre",
+   "Sortie mauvaise"
+  ],
+  "correct": 0,
+  "explain": "Filtre actif : alim ±V_cc nécessaire."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Transmittance isochrone T(jω) :",
+  "options": [
+   "Constante",
+   "Réponse en régime sinusoïdal permanent",
+   "Réponse temporelle",
+   "Inutile"
+  ],
+  "correct": 1,
+  "explain": "T(jω) = V_s/V_e en régime harmonique. Outil clé en option B."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Au gain statique T₀ = T(0) :",
+  "options": [
+   "f → 0",
+   "f → ∞",
+   "Quelconque",
+   "Aucune"
+  ],
+  "correct": 0,
+  "explain": "T₀ = transmittance à f = 0 (régime continu)."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "RIF (FIR) :",
+  "options": [
+   "Toujours instable",
+   "Toujours stable",
+   "Stable sous condition",
+   "Inutile"
+  ],
+  "correct": 1,
+  "explain": "RIF : non récursif → toujours stable."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "RII (IIR) :",
+  "options": [
+   "Toujours stable",
+   "Toujours instable",
+   "Peut être instable",
+   "Plus simple"
+  ],
+  "correct": 2,
+  "explain": "RII : récursif → peut diverger si mal conçu."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Récurrence non récursive :",
+  "options": [
+   "Filtre RII",
+   "Filtre RIF",
+   "Amplificateur",
+   "Aucun"
+  ],
+  "correct": 1,
+  "explain": "Pas de aₖ ≠ 0 → RIF."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Gain de 0 dB = ?",
+  "options": [
+   "Gain nul",
+   "Gain 1",
+   "Gain 10",
+   "Atténuation"
+  ],
+  "correct": 1,
+  "explain": "10⁰ = 1. Pas d'amplification ni atténuation."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Gain de −20 dB = A ?",
+  "options": [
+   "0,01",
+   "0,1",
+   "10",
+   "100"
+  ],
+  "correct": 1,
+  "explain": "10^(−20/20) = 0,1."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Gain de −40 dB = A ?",
+  "options": [
+   "0,01",
+   "0,1",
+   "1",
+   "100"
+  ],
+  "correct": 0,
+  "explain": "10^(−40/20) = 0,01."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Gain de −6 dB = A ?",
+  "options": [
+   "≈ 0,5",
+   "0,1",
+   "2",
+   "10"
+  ],
+  "correct": 0,
+  "explain": "−6 dB ≈ ÷2."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Gabarit d'un filtre :",
+  "options": [
+   "La FT exacte",
+   "Cahier des charges fréquentiel (zones permises/interdites)",
+   "Bode",
+   "Temps"
+  ],
+  "correct": 1,
+  "explain": "Gabarit : spécification graphique des contraintes d'atténuation."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Filtre conforme si :",
+  "options": [
+   "Son Bode tient dans le gabarit",
+   "Il fonctionne",
+   "G > 0",
+   "R et C présents"
+  ],
+  "correct": 0,
+  "explain": "Conforme = Bode respecte les seuils définis par le gabarit."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Réponse impulsionnelle h(t) :",
+  "options": [
+   "Réponse à un Dirac",
+   "Gain max",
+   "Entrée",
+   "Fréquence"
+  ],
+  "correct": 0,
+  "explain": "h(t) ou h[n] : sortie pour une impulsion. Caractérise totalement le filtre linéaire."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Réponse indicielle :",
+  "options": [
+   "Réponse à un échelon",
+   "Gain à 0 Hz",
+   "Fréquence",
+   "R"
+  ],
+  "correct": 0,
+  "explain": "Réponse pour une entrée en échelon (saut de 0 à E)."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "Temps de réponse à 5 % d'un 1er ordre :",
+  "options": [
+   "τ",
+   "2τ",
+   "3τ",
+   "5τ"
+  ],
+  "correct": 2,
+  "explain": "t_r,5% ≈ 3τ."
+ },
+ {
+  "theme": "Filtres",
+  "themeClass": "tt",
+  "q": "À t = τ d'un 1er ordre :",
+  "options": [
+   "100 %",
+   "63 %",
+   "50 %",
+   "37 %"
+  ],
+  "correct": 1,
+  "explain": "s(τ) ≈ 63 % de la valeur finale."
+ },
+ {
+  "theme": "Mesures",
+  "themeClass": "tt",
+  "q": "Voltmètre :",
+  "options": [
+   "En série",
+   "En parallèle (haute Z_e)",
+   "À la masse",
+   "Indifféremment"
+  ],
+  "correct": 1,
+  "explain": "Voltmètre : || aux bornes (haute impédance d'entrée pour ne pas charger le circuit)."
+ },
+ {
+  "theme": "Mesures",
+  "themeClass": "tt",
+  "q": "Ampèremètre :",
+  "options": [
+   "En série (faible Z_e)",
+   "Parallèle",
+   "Masse",
+   "Indifféremment"
+  ],
+  "correct": 0,
+  "explain": "Ampèremètre : en série dans la branche, faible Z_e pour ne pas perturber."
+ },
+ {
+  "theme": "Mesures",
+  "themeClass": "tt",
+  "q": "Ohmmètre :",
+  "options": [
+   "Avec alim externe",
+   "Composant hors circuit non alimenté",
+   "En parallèle alim",
+   "Avec oscilloscope"
+  ],
+  "correct": 1,
+  "explain": "Ohmmètre : composant déconnecté du circuit, non alimenté."
+ },
+ {
+  "theme": "Mesures",
+  "themeClass": "tt",
+  "q": "Incertitude type A :",
+  "options": [
+   "Datasheet",
+   "Écart-type d'une série de n mesures (σ/√n)",
+   "Au hasard",
+   "Moyenne"
+  ],
+  "correct": 1,
+  "explain": "u_A = σ/√n. Méthode statistique sur n mesures répétées."
+ },
+ {
+  "theme": "Mesures",
+  "themeClass": "tt",
+  "q": "Incertitude type B :",
+  "options": [
+   "Écart-type",
+   "À partir des specs constructeur",
+   "Oscilloscope",
+   "Aléatoire"
+  ],
+  "correct": 1,
+  "explain": "u_B : depuis la datasheet/notice (résolution, tolérance, classe)."
+ },
+ {
+  "theme": "Mesures",
+  "themeClass": "tt",
+  "q": "Pour loi rectangulaire de demi-largeur Δ, u_B :",
+  "options": [
+   "Δ",
+   "Δ/√3",
+   "Δ·√3",
+   "Δ/2"
+  ],
+  "correct": 1,
+  "explain": "u_B = Δ/√3 (loi uniforme)."
+ },
+ {
+  "theme": "Mesures",
+  "themeClass": "tt",
+  "q": "Pour loi triangulaire, u_B :",
+  "options": [
+   "Δ",
+   "Δ/√3",
+   "Δ/√6",
+   "Δ/2"
+  ],
+  "correct": 2,
+  "explain": "u_B = Δ/√6 (loi triangulaire)."
+ },
+ {
+  "theme": "Mesures",
+  "themeClass": "tt",
+  "q": "Justesse :",
+  "options": [
+   "Rapidité",
+   "Faible erreur systématique (proche du vrai)",
+   "Répétabilité",
+   "Coût"
+  ],
+  "correct": 1,
+  "explain": "Justesse = moyenne proche de la vraie valeur."
+ },
+ {
+  "theme": "Mesures",
+  "themeClass": "tt",
+  "q": "Fidélité :",
+  "options": [
+   "Vrai",
+   "Faible dispersion entre mesures",
+   "Vitesse",
+   "Ancienneté"
+  ],
+  "correct": 1,
+  "explain": "Fidélité = répétabilité. Indépendante de la justesse."
+ },
+ {
+  "theme": "Mesures",
+  "themeClass": "tt",
+  "q": "Incertitude composée u_C :",
+  "options": [
+   "Une somme directe",
+   "√(u_A² + u_B²)",
+   "u_A × u_B",
+   "u_A + u_B"
+  ],
+  "correct": 1,
+  "explain": "Somme quadratique des incertitudes indépendantes."
+ },
+ {
+  "theme": "Mesures",
+  "themeClass": "tt",
+  "q": "Incertitude élargie U avec k = 2 :",
+  "options": [
+   "U = u_C",
+   "U = 2·u_C (≈ 95 %)",
+   "U = u_C/2",
+   "U = u_C²"
+  ],
+  "correct": 1,
+  "explain": "U = k·u_C, k = 2 → niveau de confiance ≈ 95 %."
+ },
+ {
+  "theme": "Mesures",
+  "themeClass": "tt",
+  "q": "Chiffres significatifs d'incertitude :",
+  "options": [
+   "Beaucoup",
+   "1 ou 2",
+   "10",
+   "Aucun"
+  ],
+  "correct": 1,
+  "explain": "Convention : incertitude arrondie à 1 ou 2 chiffres significatifs."
+ }
+]
